@@ -11,6 +11,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			
+			#cover-bukuceritamu img{
+				width: 100%;
+			}
+			@media (min-width:980px ){
+				img#profile-pict{
+					width:60%;
+				}
+				
+			}
+			@media (min-width:750px){
+				#cover-bukuceritamu img{
+					width: 600px;
+				}
+			}
+		</style>
+	
 	</head>
 	<body class="is-preload">
 
@@ -42,7 +60,7 @@
 							</p>
 						</div>
 						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img style="width: 60%;" src="images/editted.png" alt="" /></span>
+							<span class="image fit"><img id="profile-pict" src="images/editted.png" alt="" /></span>
 						</div>
 					</div>
 				</div>
@@ -109,12 +127,14 @@
 					<!-- <p>BukuCeritamu</p> -->
 					<div class="row gtr-150">
 						<div class="col-12 col-12-medium">
-							<span class="image" onclick="openModal();currentSlide(1)"><img style="width: 600px;" src="images/bukuceritamu.PNG" alt="" /></span>
+							<div id="cover-bukuceritamu">
+								<img src="images/bukuceritamu.PNG" alt="" />
+							</div>
 							<h3>BukuCeritamu</h3>
 							<p>Basicly a web based app (build with Laravel and Fabric.js) that allows you to make a storybook with supportive pictures</p>
 							<ul class="actions special">
-								<li><a href="#" class="button">Visit</a></li>
-								<li><a href="#" class="button">Github</a></li>
+								<li><a href="https://bukuceritamu.herokuapp.com/" title="Bukuceritamu.com" class="button">Visit</a></li>
+								<li><a href="https://github.com/fadilnatakusumah/college-project-bukuceritamu"  title="Bukuceritamu" class="button">Github</a></li>
 							</ul>
 
 							<!-- modal viewer -->
