@@ -27,7 +27,7 @@ export class About extends Component {
               <h1>Hi, I'm Fadil!</h1>
               <br />
               <p>
-                Full-stack Web Developer. Javascript lover. Coffee and Milk
+                Self taught Full-stack Web Developer. Javascript lover. Coffee and Milk
                 Addict
               </p>
               <hr />
