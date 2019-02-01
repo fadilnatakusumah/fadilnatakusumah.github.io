@@ -17,8 +17,8 @@ export class Navigation2 extends Component {
                 {/* right */}
                 <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-end'}}>
                     <div>
-                        <a style={links} href={'www.linkedin.com'}>
-                            <img style={iconStyle} src="https://www.linkedin.com/in/muhammad-fadhilah-mulyana-260678158/"></img>
+                        <a style={links} href={'https://www.linkedin.com/in/muhammad-fadhilah-mulyana-260678158'}>
+                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/linkedin-filled.png"></img>
                             Linkedin
                         </a>
                     </div>
