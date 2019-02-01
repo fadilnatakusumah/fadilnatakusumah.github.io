@@ -31,7 +31,7 @@ export class Resume extends Component {
 
             <div>
 
-              <a href={'https://doc-04-9k-docs.googleusercontent.com/docs/securesc/medpg10mmku73a8sfa12h5frp57f6fs7/dvkl6dl64dilrc8lvi5ck8gamnv2nld3/1549015200000/00994631078964713686/00994631078964713686/1W1b3bWstx90XUO7eRugJoTDyf21HAdJV?e=download&nonce=qc7tq781k4li8&user=00994631078964713686&hash=7mk0tti8jcpkhuek7unje2aoqqcis1bh'} style={{textAlign: 'center'}}>
+              <a href={'https://doc-0g-94-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/rkegpsoua3npilq8dfb5kttmkpujv0u0/1549022400000/00994631078964713686/*/1-ZpxkCUYpwsRuJtE-qLLQ3ediiohxu2c?e=download'} style={{textAlign: 'center'}}>
                 <img style={imageStyle} src="https://img.icons8.com/color/512/000000/resume.png"></img>
                 <h5>Resume.pdf</h5>
               </a>
