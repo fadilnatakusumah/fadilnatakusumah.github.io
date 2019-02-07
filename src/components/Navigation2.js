@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
+import MediaQuery from 'react-responsive';
 
 export class Navigation2 extends Component {
     render() {
         return (
             <div className={'card'} style={navStyle}>
                 {/* left */}
-                <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-start'}}>
-                    <div>
-                        <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
-                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
-                            fadil.ntksmh@gmail.com
+                <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-start' }}>
+                    <MediaQuery query={'(max-device-width: 576px)'}>
+                        <div>
+                            <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
+                                <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                                Email
+                            </a>
+                        </div>
+                    </MediaQuery>
+                    <MediaQuery query={'(min-device-width: 577px)'}>
+                            <div>
+                            <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
+                                <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                                fadil.ntksmh@gmail.com
                         </a>
-                    </div>
+                        </div>
+                    </MediaQuery>
                 </div>
 
                 {/* right */}
-                <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-end'}}>
+                <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-end' }}>
                     <div>
                         <a style={links} href={'https://www.linkedin.com/in/muhammad-fadhilah-mulyana-260678158'}>
                             <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/linkedin-filled.png"></img>
@@ -28,7 +39,7 @@ export class Navigation2 extends Component {
                             Github</a>
                     </div>
                 </div>
-                
+
             </div>
         )
     }
