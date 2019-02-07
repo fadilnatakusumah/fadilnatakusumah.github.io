@@ -21,7 +21,7 @@ html {
 
 .image-profile {
   max-width: 300px;
-  height: auto;
+  height: '100%';
   border-radius: 5px;
 }
 
