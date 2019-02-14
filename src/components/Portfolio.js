@@ -29,42 +29,14 @@ export class Portfolio extends Component {
             <br />
 
             <div>
-              <h4>Laravel Projects</h4>
-              <br/>
-              <div>
-                {/* project laravel 1 */}
-                <div style={projectStyle}>
-                  <img
-                    src={bukuCeritamu}
-                    className="image-profile"
-                    alt="logo"
-                  />
-                  <div style={textContentStyle}>
-                    <h3>BukuCeritamu</h3>
-                    <p>
-                      Basicly a web based app that allows you to make a storybook with supportive pictures. Plus you can export it to PDF
-                  </p>
-                    <div>
-                      <small>Build with Laravel and Fabric.js</small>
-                    </div>
-                    <div>
-                      <a href={'https://fadilnatakusumah.000webhostapp.com'} target={'_blank'}>Visit</a> <a target={'_blank'} href={'https://github.com/fadilnatakusumah/bukuceritamu'}>Github</a>
-                    </div>
-                  </div>
-                </div>
-                {/* project laravel 1 */}
-              </div>
-              {/* endof laravel projects */}
-              <br/>
-              <hr/>
               <h4>React Projects</h4>
-              <br/>
+              <br />
               <div>
                 {/* project laravel 1 */}
                 <div style={projectStyle}>
                   <img
                     src={faceDetection}
-                    className="image-profile"
+                    className="image-project"
                     alt="logo"
                   />
                   <div style={textContentStyle}>
@@ -83,7 +55,34 @@ export class Portfolio extends Component {
                 {/* project laravel 1 */}
               </div>
               {/* endof react projects */}
-
+              <br />
+              <hr />
+              <h4>Laravel Projects</h4>
+              <br />
+              <div>
+                {/* project laravel 1 */}
+                <div style={projectStyle}>
+                  <img
+                    src={bukuCeritamu}
+                    className="image-project"
+                    alt="logo"
+                  />
+                  <div style={textContentStyle}>
+                    <h3>BukuCeritamu</h3>
+                    <p>
+                      Basicly a web based app that allows you to make a storybook with supportive pictures. Plus you can export it to PDF
+                  </p>
+                    <div>
+                      <small>Build with Laravel and Fabric.js</small>
+                    </div>
+                    <div>
+                      <a href={'https://fadilnatakusumah.000webhostapp.com'} target={'_blank'}>Visit</a> <a target={'_blank'} href={'https://github.com/fadilnatakusumah/bukuceritamu'}>Github</a>
+                    </div>
+                  </div>
+                </div>
+                {/* project laravel 1 */}
+              </div>
+              {/* endof laravel projects */}
             </div>
           </div>
         </div>
@@ -108,14 +107,14 @@ const textContentStyle = {
   padding: "20px",
   fontSize: "18px",
 };
-const buttonStyle ={
+const buttonStyle = {
   borderRadius: '5px',
   borderWidth: '3px',
   borderColor: 'purple'
 }
 
 const projectStyle = {
-  display: 'flex', 
+  display: 'flex',
   flexWrap: 'wrap',
   marginBottom: '25px'
 };

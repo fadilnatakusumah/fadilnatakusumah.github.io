@@ -27,13 +27,12 @@ export class About extends Component {
               <h1>Hi, I'm Fadil!</h1>
               <br />
               <p>
-                Self taught Full-stack Web Developer. Javascript lover. Coffee and Milk
-                Addict
+                Self taught Web Developer. Javascript lover. "I just like it simple"
               </p>
               <hr />
               <p>
-                full name is <b>Muhammad Fadhilah Mulyana</b>. My stack is WAMP,
-                but still excited with others like React, React Native, Vue and
+                full name is <b>Muhammad Fadhilah Mulyana</b>. my skill field (stack) is WAMP,
+                but likes to play with others like React, React Native, Vue and
                 Laravel.
               </p>
               <p>
