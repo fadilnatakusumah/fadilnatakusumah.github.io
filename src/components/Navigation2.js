@@ -28,13 +28,13 @@ export class Navigation2 extends Component {
                 {/* right */}
                 <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-end' }}>
                     <div>
-                        <a style={links} href={'https://www.linkedin.com/in/muhammad-fadhilah-mulyana-260678158'}>
+                        <a style={links} target={'_blank'} href={'www.linkedin.com/in/muhammad-fadhilah-mulyana'}>
                             <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/linkedin-filled.png"></img>
                             Linkedin
                         </a>
                     </div>
                     <div>
-                        <a style={links} href={'https://github.com/fadilnatakusumah'}>
+                        <a style={links} target={'_blank'} href={'https://github.com/fadilnatakusumah'}>
                             <img style={iconStyle} src="https://img.icons8.com/windows/48/000000/github.png"></img>
                             Github</a>
                     </div>
