@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ScrollableAnchor from "react-scrollable-anchor/lib/ScrollableAnchor";
 import bukuCeritamu from "../assets/images/bukuceritamu.PNG";
 import faceDetection from "../assets/images/facedetection.png";
+import jobFinder from "../assets/images/jobfinder.png";
 
 export class Portfolio extends Component {
   render() {
@@ -29,6 +30,36 @@ export class Portfolio extends Component {
             <br />
 
             <div>
+
+              <h4>React Native Projects</h4>
+              <br />
+              <div>
+                {/* project rn 1 */}
+                <div style={projectStyle}>
+                  <img
+                    src={jobFinder}
+                    className="image-project"
+                    alt="logo"
+                  />
+                  <div style={textContentStyle}>
+                    <h3>BukuCeritamu</h3>
+                    <p>
+                      An App that provides jobs information at your area, and you can save the job first or directly apply to it
+                      </p>
+                    <div>
+                      <small>Build with React Native</small>
+                    </div>
+                    <div>
+                      <a style={{marginRight: 10}} href={'https://expo.io/@fadilnatakusumah/jobFinder'} target={'_blank'}>View App</a> 
+                      <a target={'_blank'} href={'https://github.com/fadilnatakusumah/react-native-job-finder'}>Github</a>
+                    </div>
+                  </div>
+                </div>
+                {/* project laravel 1 */}
+              </div>
+              {/* endof laravel projects */}
+              <hr />
+              <br />
               <h4>React Projects</h4>
               <br />
               <div>
@@ -56,7 +87,9 @@ export class Portfolio extends Component {
               </div>
               {/* endof react projects */}
               <br />
+
               <hr />
+
               <h4>Laravel Projects</h4>
               <br />
               <div>
@@ -83,6 +116,9 @@ export class Portfolio extends Component {
                 {/* project laravel 1 */}
               </div>
               {/* endof laravel projects */}
+
+              <hr />
+
             </div>
           </div>
         </div>
