@@ -7,20 +7,20 @@ export class Navigation2 extends Component {
             <div className={'card'} style={navStyle}>
                 {/* left */}
                 <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-start' }}>
-                    <MediaQuery query={'(max-device-width: 576px)'}>
+                    {/* <MediaQuery query={'(min-device-width:577px)'}>
+                        <div>
+                            <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
+                                <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                                fadil.ntksmh@gmail.com
+                            </a>
+                        </div>
+                    </MediaQuery> */}
+                    <MediaQuery query={'(min-device-width: 577px)'}>
                         <div>
                             <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
                                 <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
                                 Email
                             </a>
-                        </div>
-                    </MediaQuery>
-                    <MediaQuery query={'(min-device-width: 577px)'}>
-                            <div>
-                            <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
-                                <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
-                                fadil.ntksmh@gmail.com
-                        </a>
                         </div>
                     </MediaQuery>
                 </div>
