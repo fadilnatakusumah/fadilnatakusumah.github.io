@@ -7,22 +7,22 @@ export class Navigation2 extends Component {
             <div className={'card'} style={navStyle}>
                 {/* left */}
                 <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-start' }}>
-                    {/* <MediaQuery query={'(min-device-width:577px)'}>
-                        <div>
-                            <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
-                                <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
-                                fadil.ntksmh@gmail.com
+                    {/* <MediaQuery query={'(min-device-width:577px)'}> */}
+                    <div className={'full_email'}>
+                        <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
+                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                            fadil.ntksmh@gmail.com
                             </a>
-                        </div>
-                    </MediaQuery> */}
-                    <MediaQuery query={'(min-device-width: 577px)'}>
-                        <div>
-                            <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
-                                <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
-                                Email
+                    </div>
+                    {/* </MediaQuery> */}
+                    {/* <MediaQuery query={'(min-device-width: 577px)'}> */}
+                    <div className={'email'}>
+                        <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
+                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                            Email
                             </a>
-                        </div>
-                    </MediaQuery>
+                    </div>
+                    {/* </MediaQuery> */}
                 </div>
 
                 {/* right */}

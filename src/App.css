@@ -68,6 +68,32 @@ html {
   padding: 0;
 }
 
+.full_email, .email{
+  display: none;
+}
+
+@media (min-width: 577px){
+  .full_email {
+    display: block;
+  }
+}
+@media (max-width: 576px){
+  .email{
+    display: block;
+  }
+}
+
+.resume{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 576px){
+  .resume {
+    flex-direction: column
+  }
+}
+
 /* 
 .App {
   text-align: center;
