@@ -10,7 +10,7 @@ export class Navigation2 extends Component {
                     {/* <MediaQuery query={'(min-device-width:577px)'}> */}
                     <div className={'full_email'}>
                         <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
-                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                            <img style={iconStyle} src="https://img.icons8.com/ios-glyphs/80/000000/secured-letter.png"></img>
                             fadil.ntksmh@gmail.com
                             </a>
                     </div>
@@ -18,7 +18,7 @@ export class Navigation2 extends Component {
                     {/* <MediaQuery query={'(min-device-width: 577px)'}> */}
                     <div className={'email'}>
                         <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
-                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/secured-letter-filled.png"></img>
+                            <img style={iconStyle} src="https://img.icons8.com/ios-glyphs/80/000000/secured-letter.png"></img>
                             Email
                             </a>
                     </div>
@@ -29,7 +29,7 @@ export class Navigation2 extends Component {
                 <div style={{ paddingTop: '5px', display: 'flex', justifyContent: 'flex-end' }}>
                     <div>
                         <a style={links} target={'_blank'} href={'https://linkedin.com/in/muhammad-fadhilah-mulyana'}>
-                            <img style={iconStyle} src="https://img.icons8.com/ios/48/000000/linkedin-filled.png"></img>
+                            <img style={iconStyle} src="https://img.icons8.com/ios-glyphs/480/000000/linkedin.png"></img>
                             Linkedin
                         </a>
                     </div>

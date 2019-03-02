@@ -39,6 +39,7 @@ export class About extends Component {
                 technology everyday with good architecture to
                 solving problems.
               </p>
+              <p>Current position: <b>Yogyakarta, Indonesia</b></p>
             </div>
           </div>
         </div>
