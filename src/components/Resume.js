@@ -36,7 +36,7 @@ export class Resume extends Component {
                 <h5>Resume.pdf</h5>
               </a>
 
-              <a href={'https://i.ibb.co/8dTFwZc/CV.png'} target={'_blank'} style={{ textAlign: 'center' }}>
+              <a href={'https://i.ibb.co/Pc9htQ4/CV.png'} target={'_blank'} style={{ textAlign: 'center' }}>
                 <img style={imageStyle} src="https://img.icons8.com/color/512/000000/resume.png"></img>
                 <h5>CV.png</h5>
               </a>
