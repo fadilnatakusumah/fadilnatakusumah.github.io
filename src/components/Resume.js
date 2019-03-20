@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import ScrollableAnchor from "react-scrollable-anchor/lib/ScrollableAnchor";
+import Viewer from 'react-viewer';
+import 'react-viewer/dist/index.css';
 
 export class Resume extends Component {
   constructor(props) {
     super(props);
+    this.state={
+      viewResume: false,
+      viewCv: false,
+    }
   }
 
   render() {
@@ -31,15 +37,39 @@ export class Resume extends Component {
 
             <div className={'resume'}>
 
-              <a href={'https://doc-0g-9k-docs.googleusercontent.com/docs/securesc/medpg10mmku73a8sfa12h5frp57f6fs7/fimdramt5d61vm7fftqsp23rk3s7bajs/1551513600000/00994631078964713686/00994631078964713686/1dBVJ7CjhbzO4ED_gISWZo6Tfze_6Q_yK?e=download&nonce=igm3r5dqkc5fk&user=00994631078964713686&hash=tjm63tq8c8ha7t4lg00srbn11g2fo9ne'} style={{ textAlign: 'center' }}>
+              <a href={'https://drive.google.com/open?id=1dBVJ7CjhbzO4ED_gISWZo6Tfze_6Q_yK'} target="blank" style={{ textAlign: 'center', textDecoration: 'none' }}>
                 <img style={imageStyle} src="https://img.icons8.com/color/512/000000/resume.png"></img>
                 <h5>Resume.pdf</h5>
               </a>
+              
+              {/* <div onClick={()=>this.setState({viewResume: !this.state.viewResume})} href={'https://i.ibb.co/Pc9htQ4/CV.png'} style={{ textAlign: 'center', cursor: 'pointer' }}>
+                <img style={imageStyle} src="https://img.icons8.com/color/512/000000/resume.png"></img>
+                <h5>Resume.pdf</h5>
+                <Viewer
+                visible={this.state.viewResume}
+                onClose={() => this.setState({viewResume: false})}
+                images={[{src: "https://drive.google.com/open?id=1dBVJ7CjhbzO4ED_gISWZo6Tfze_6Q_yK"}]}
+                downloadable
+                >
+                </Viewer>
+              </div> */}
 
-              <a href={'https://i.ibb.co/Pc9htQ4/CV.png'} target={'_blank'} style={{ textAlign: 'center' }}>
+              <div onClick={()=>this.setState({viewCv: !this.state.viewCv})} href={'https://i.ibb.co/Pc9htQ4/CV.png'} style={{ textAlign: 'center', cursor: 'pointer' }}>
                 <img style={imageStyle} src="https://img.icons8.com/color/512/000000/resume.png"></img>
                 <h5>CV.png</h5>
-              </a>
+                <Viewer
+                visible={this.state.viewCv}
+                onClose={() => this.setState({viewCv: false})}
+                images={[{src: "https://i.ibb.co/Pc9htQ4/CV.png"}]}
+                downloadable
+                >
+                </Viewer>
+              </div>
+
+              {/* <a href={'https://i.ibb.co/Pc9htQ4/CV.png'} target={'_blank'} style={{ textAlign: 'center' }}>
+                <img style={imageStyle} src="https://img.icons8.com/color/512/000000/resume.png"></img>
+                <h5>CV.png</h5>
+              </a> */}
             </div>
 
           </div>
