@@ -31,7 +31,7 @@ export class About extends Component {
               </p>
               <hr />
               <p>
-                full name is <b>Muhammad Fadhilah Mulyana</b>. Likes to play with others like React, React Native, VueJS and
+                full name is <b>Muhammad Fadhilah Mulyana</b>. Likes to play with React, React Native, VueJS and
                 Laravel.
               </p>
               <p>

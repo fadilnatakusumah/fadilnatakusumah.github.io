@@ -19,7 +19,7 @@ export class Navigation2 extends Component {
                     <div className={'email'}>
                         <a style={linksLeft} href={'mailto:fadil.ntksmh@gmail.com'}>
                             <img style={iconStyle} src="https://img.icons8.com/ios-glyphs/80/000000/secured-letter.png"></img>
-                            Email
+                            
                             </a>
                     </div>
                     {/* </MediaQuery> */}
@@ -56,7 +56,7 @@ const navStyle = {
     backgroundColor: '#390137',
     color: 'black',
     textAlign: 'center',
-    height: '40px',
+    minHeight: '40px',
     marginBottom: '30px',
     backgroundColor: '#f8f8f8',
     display: 'flex',
