@@ -47,7 +47,7 @@ class App extends Component {
               position: 'fixed',
               bottom: '30px',
               textAlign: 'center',
-            }}>fadilnatakusumah</h6>
+            }}>please contact me by email - fadil.ntksmh@gmail.com</h6>
           </div>
 
 
