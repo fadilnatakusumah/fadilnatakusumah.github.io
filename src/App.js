@@ -11,7 +11,8 @@ import './App.css';
 // import coffee from './assets/images/coffee.gif';
 
 import Header from './components/Header/Header'
-import Portofolios from './components/Portofolios/Portofolios'
+import Portfolios from './components/Portfolios/Portfolios'
+import About from './components/About/About';
 import Aux from './components/hoc';
 
 class App extends Component {
@@ -23,7 +24,8 @@ class App extends Component {
 
   renderMoreContent = () => (
     <Aux>
-      <Portofolios />
+      <Portfolios />
+      <About />
     </Aux>
   )
   render() {

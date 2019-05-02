@@ -3,14 +3,14 @@ import React from 'react';
 import Label from './../../Label/Label';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import './Portofolio.css';
+import './Portfolio.css';
 import 'animate.css';
 
 const portfolio = (props) => {
     const { dataApp } = props;
     if (props.isVisible) {
         return (
-            <div className="portofolio-container animated zoomInLeft">
+            <div className="portfolio-container animated zoomInLeft">
                 <LazyLoadImage
                     alt={dataApp.projectName}
                     src={dataApp.imageSrc}

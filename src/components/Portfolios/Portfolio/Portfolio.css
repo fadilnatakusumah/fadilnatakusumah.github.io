@@ -1,16 +1,17 @@
-.portofolio-container {
+.portfolio-container {
     display         : flex;
     justify-content : center;
     flex-direction  : row;
     align-items     : center;
     min-height      : 100vh;
     margin          : 30px 0;
+    padding: 30px;
     background-color: rgba(178, 34, 34, .1);
-    border-radius: 15px;
+    border-radius   : 15px;
 }
 
 @media only screen and (max-width: 600px) {
-    .portofolio-container {
+    .portfolio-container {
         flex-direction : column;
         justify-content: center;
         flex-wrap      : nowrap;
@@ -20,10 +21,8 @@
 
 .app-preview {
     border-radius: 5px;
-    /* max-width : 600px;
-    max-height: 600px; */
-    height    : 60vmin;
-    width     : 75vmin;
+    height       : 60vmin;
+    width        : 75vmin;
 }
 
 .app-description {
@@ -59,6 +58,6 @@
 
 .button-app-wrapper a:hover {
     background-color: #aa16aa;
-    transform : scale(1.1);
-    transition: .5s;
+    transform       : scale(1.1);
+    transition      : .5s;
 }
