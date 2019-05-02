@@ -1,0 +1,23 @@
+.navicons-container {
+    height: 10vh;
+    width : 100%;
+}
+
+.iconImage {
+    height: 2.5em;
+}
+
+.navicons {
+    float: right;
+}
+
+.navicons a img {
+    transition: .5s;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.navicons a img:hover {
+    transition: .5s;
+    transform: scale(1.3)
+}

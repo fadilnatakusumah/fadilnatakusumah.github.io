@@ -1,57 +1,41 @@
 import React, { Component } from 'react';
-import logo from './assets/images/preview.jpg';
 import './App.css';
 
 // my components
-import Navigation from './components/Navigation';
-import { Navigation2 } from './components/Navigation2';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
-import Footer from './components/Footer';
+// import Navigation from './components/Navigation';
+// import { Navigation2 } from './components/Navigation2';
+// import About from './components/About';
+// import Portfolio from './components/Portfolio';
+// import Resume from './components/Resume';
+// import Footer from './components/Footer';
+// import coffee from './assets/images/coffee.gif';
 
-import coffee from './assets/images/coffee.gif';
+import Header from './components/Header/Header'
+import Portofolios from './components/Portofolios/Portofolios'
+import Aux from './components/hoc';
+
 class App extends Component {
+  state = {
+    loading: true,
+  }
+
+  setLoading = () => this.setState({ loading: false })
+
+  renderMoreContent = () => (
+    <Aux>
+      <Portofolios />
+    </Aux>
+  )
   render() {
     return (
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0,
-        }}
-      >
-        <div
-          style={{
-            backgroundImage: `url(${coffee})`,
-            backgroundSize: 'cover',
-            height: '100%',
-          }}
-        >
-
-          <div style={{
-            padding: '20px',
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            textAlign: 'center'
-          }}>
-            <h1 style={{ color: 'white' }}>Hey! Sorry, this website is still on maintenance</h1>
-            <h6 style={{
-              color: 'white',
-              position: 'fixed',
-              bottom: '30px',
-              textAlign: 'center',
-            }}>fadil.ntksmh@gmail.com</h6>
-          </div>
-
-
-        </div>
+      <div className="wrapper">
+        <Header
+          loading={this.state.loading}
+          setLoading={this.setLoading} />
+        {!this.state.loading ?
+          this.renderMoreContent()
+          : null
+        }
       </div>
     );
   }

@@ -1,0 +1,15 @@
+.header-container {
+    min-height      : 100vh;
+    background-image: url('../../assets/images/coffee.gif');
+    background-size : cover;
+}
+
+.header {
+    padding: 30px;
+    background-color: rgba(64, 4, 121, 0.75);
+    min-height      : 100vh;
+    display         : flex;
+    flex-direction  : column;
+    justify-content: center;
+    align-items: center;
+}
