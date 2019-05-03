@@ -2,6 +2,7 @@ import React from 'react';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import TrackVisibility from 'react-on-screen';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import ProfilePict from '../../assets/images/preview.jpg';
 
@@ -36,11 +37,13 @@ const Content = ({ isVisible }) => {
 }
 
 const about = () => (
-    <div className="about-container">
-        <TrackVisibility once>
-            <Content />
-        </TrackVisibility>
-    </div>
+    <ScrollableAnchor id={"about"}>
+        <div className="about-container">
+            <TrackVisibility once>
+                <Content />
+            </TrackVisibility>
+        </div>
+    </ScrollableAnchor>
 )
 
 export default about;

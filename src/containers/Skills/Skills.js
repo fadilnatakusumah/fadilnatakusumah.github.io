@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TrackVisibility from 'react-on-screen';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import './Skills.css';
 import 'animate.css';
@@ -53,12 +54,14 @@ const Skill = ({ isVisible }) => {
 }
 
 const skills = () => (
-  <div className="skills-container">
-    <h1>Skills</h1>
-    <TrackVisibility once>
-      <Skill />
-    </TrackVisibility>
-  </div>
+  <ScrollableAnchor id={"skills"}>
+    <div className="skills-container">
+      <h1>Skills</h1>
+      <TrackVisibility once>
+        <Skill />
+      </TrackVisibility>
+    </div>
+  </ScrollableAnchor>
 )
 
 export default skills;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TrackVisibility from 'react-on-screen';
-// import NavIcons from '../Header/NavIcons/NavIcons';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import './Contact.css';
 import 'animate.css';
@@ -31,13 +31,15 @@ const Contact = ({ isVisible }) => {
 }
 
 const contactContainer = () => (
-  <div className="contact-container">
-    <h1>Interested in working together?</h1>
-    <h3>Just give me a shout!</h3>
-    <TrackVisibility once>
-      <Contact />
-    </TrackVisibility>
-  </div>
+  <ScrollableAnchor id={"contact"}>
+    <div className="contact-container">
+      <h1>Interested in working together?</h1>
+      <h3>Just give me a shout!</h3>
+      <TrackVisibility once>
+        <Contact />
+      </TrackVisibility>
+    </div>
+  </ScrollableAnchor>
 )
 
 export default contactContainer;

@@ -84,6 +84,10 @@
   transition: 0.5s;
 }
 
+.navLink ul li a{
+  text-decoration: none;
+}
+
 .navLink ul li:hover {
   transform : scale(1.2);
   transition: .5s;
