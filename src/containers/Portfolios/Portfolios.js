@@ -11,9 +11,9 @@ const portfolios = () => (
     <ScrollableAnchor id={"portfolios"}>
         <div className="portfolios-container">
             <h1 style={{ fontSize: '4em', color: 'purple', textAlign: 'center' }}>Latest work</h1>
-            {dataApps.map(data => {
+            {dataApps.map((data, i) => {
                 return (
-                    <TrackVisibility once>
+                    <TrackVisibility key={i} once>
                         <Portfolio dataApp={data} />
                     </TrackVisibility>
                 )

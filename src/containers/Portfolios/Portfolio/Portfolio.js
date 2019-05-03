@@ -21,8 +21,8 @@ const portfolio = (props) => {
                     <p>{dataApp.description}</p>
                     <h6>Technologies:</h6>
                     <div className={"label-wrapper"}>
-                        {dataApp.technologies.map(tech => (
-                            <Label title={tech} />
+                        {dataApp.technologies.map((tech, i) => (
+                            <Label title={tech} key={i} />
                         ))}
                     </div>
                     <div className={"button-app-wrapper"}>

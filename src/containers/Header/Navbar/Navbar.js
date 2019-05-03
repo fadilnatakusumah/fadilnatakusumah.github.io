@@ -83,7 +83,7 @@ class Nav extends React.Component {
         }
         <div className={`navigation-container ${classHideBar} ${classDarker}`}>
           <div className="title animated bounceInLeft">
-            <a href="fadilnatakusumah.github.com"><h1>Muhammad Fadhilah M.</h1></a>
+            <a href="#header"><h1>Muhammad Fadhilah M.</h1></a>
           </div>
           <div className="navigation animated bounceInRight" onClick={this.showNav}>
             <span>MENU</span>

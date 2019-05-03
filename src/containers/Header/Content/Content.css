@@ -1,30 +1,41 @@
-.content-container{
-    display:flex;
-    padding: 30px;
-    flex:1;
-    flex-direction: column;
+.content-container {
+    display        : flex;
+    padding        : 30px;
+    flex           : 1;
+    flex-direction : column;
     justify-content: center;
-    align-items: left;
-    position: relative;
+    align-items    : left;
+    position       : relative;
 }
-@font-face{
+
+@font-face {
     font-family: Marshmallow;
-    src: url('../../../assets/fonts/Marshmallow.otf');
+    src        : url('../../../assets/fonts/Marshmallow.otf');
 }
 
 @font-face {
     font-family: Bill;
-    src: url('../../../assets/fonts/Bill\ Corporate\ Narrow\ Medium\ [TheFontsMaster.com].otf')
-  }
-  
-.large-title{
-    font-size: 5em;
-    font-family: Bill, 'Arial', Courier, monospace;
-    color: white;
+    src        : url('../../../assets/fonts/Bill\ Corporate\ Narrow\ Medium\ [TheFontsMaster.com].otf')
 }
-  
-.little-title{
-    font-size: 2em;
+
+.large-title {
+    font-size  : 5em;
+    font-family: Bill, 'Arial', Courier, monospace;
+    color      : white;
+}
+
+.little-title {
+    font-size  : 2em;
     font-family: Bill, 'Courier New', Courier, monospace;
-    color: rgb(209, 231, 6);
+    color      : rgb(209, 231, 6);
+}
+
+@media only screen and (max-width:500px) {
+    .large-title {
+        font-size: 3em;
+    }
+
+    .little-title {
+        font-size: 1em;
+    }
 }
