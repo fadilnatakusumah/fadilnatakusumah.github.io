@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../hoc';
+import Aux from '../../../components/hoc';
 
 import './Navbar.css';
 import 'animate.css';

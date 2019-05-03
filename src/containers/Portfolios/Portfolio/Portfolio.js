@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Label from './../../Label/Label';
+import Label from '../../../components/Label/Label';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import './Portfolio.css';

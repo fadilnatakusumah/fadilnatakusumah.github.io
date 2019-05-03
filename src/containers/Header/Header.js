@@ -3,8 +3,8 @@ import React from 'react';
 import Navbar from './Navbar/Navbar';
 import NavIcons from './NavIcons/NavIcons';
 import Content from './Content/Content';
-import Aux from './../hoc';
-import LoadingComponent from '../LoadingCss/Loading';
+import Aux from '../../components/hoc';
+import LoadingComponent from '../../components/LoadingCss/Loading';
 import './Header.css';
 import 'animate.css';
 

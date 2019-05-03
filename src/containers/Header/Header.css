@@ -5,11 +5,11 @@
 }
 
 .header {
-    padding: 30px;
+    padding         : 50px 30px;
     background-color: rgba(64, 4, 121, 0.75);
     min-height      : 100vh;
     display         : flex;
     flex-direction  : column;
-    justify-content: center;
-    align-items: center;
+    justify-content : center;
+    align-items     : center;
 }

@@ -15,6 +15,11 @@ const portfolios = () => (
                 </TrackVisibility>
             )
         }).reverse()}
+        <div className="viewMoreProjects">
+            <a href="https://github.com/fadilnatakusumah" target="_blank" rel="noopener noreferrer" title="GITHUB | fadilnatakusumah">
+                View more Projects
+            </a>
+        </div>
     </div>
 )
 
