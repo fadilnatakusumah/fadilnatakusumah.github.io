@@ -11,7 +11,13 @@ class Nav extends React.Component {
     render() {
         return (
             <div className="navicons-container">
-                <div className="navicons animated bounceInUp">
+                <div className="navicons-left animated bounceInUp">
+                    <a href="#contact" rel="noopener noreferrer" title="CONTACT ME">
+                        Contact me
+                    </a>
+
+                </div>
+                <div className="navicons-right animated bounceInUp">
                     <a href="mailto:fadil.ntksmh@gmail.com" target="_blank" rel="noopener noreferrer" title="fadil.ntksmh@gmail.com">
                         <img alt="emailIcon" className={"iconImage"} src={emailIcon}></img>
                     </a>
