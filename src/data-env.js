@@ -17,17 +17,17 @@ const dataProjects = [
         linkApp: 'https://fadilnatakusumah.000webhostapp.com/',
         imageSrc: SSBukuCeritamu,
     },
-    {
-        projectName: 'Random Cat Pictures',
-        description: 'Generate random cat pictures that got from API request',
-        technologies: [
-            'React',
-            'Tachyons CSS'
-        ],
-        linkGithub: 'https://github.com/fadilnatakusumah/react-randomcat-api',
-        linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
-        imageSrc: SSRandomCatsPicts,
-    },
+    // {
+    //     projectName: 'Random Cat Pictures',
+    //     description: 'Generate random cat pictures that got from API request',
+    //     technologies: [
+    //         'React',
+    //         'Tachyons CSS'
+    //     ],
+    //     linkGithub: 'https://github.com/fadilnatakusumah/react-randomcat-api',
+    //     linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
+    //     imageSrc: SSRandomCatsPicts,
+    // },
     {
         projectName: 'Job Finder',
         description: 'An App that provides jobs information at your area, and you can save the job first or directly apply to it',
