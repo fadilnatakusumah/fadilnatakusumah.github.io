@@ -3,6 +3,7 @@ import SSBukuCeritamu from './assets/gifs/snapshot_bukuceritamu.gif';
 import SSRandomCatsPicts from './assets/gifs/snapshot_randomcatpicts.gif';
 import SSJobFinder from './assets/gifs/snapshot_jobfinder.gif';
 import SSYourThoughts from './assets/gifs/snapshot_yourthoughts.gif';
+import SSRickAndMorty from './assets/gifs/snapshot_RickAndMortyEpisodes.gif';
 
 const dataProjects = [
     // {
@@ -16,6 +17,21 @@ const dataProjects = [
     //     linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
     //     imageSrc: SSRandomCatsPicts,
     // },
+    {
+        projectName: 'Rick and Morty Episodes',
+        description: 'Yeah my first Typescript app (I know it`s not the best, but hey). Finally I could accomplished understanding typescript with react',
+        technologies: [
+            'React',
+            'React UseEffect',
+            'React UseReducer',
+            'React Context',
+            'React Router',
+            'Axios',
+        ],
+        linkGithub: 'https://github.com/fadilnatakusumah/rick-and-morty-episodes',
+        linkApp: 'https://fadilnatakusumah.github.io/rick-and-morty-episodes/#/favorites',
+        imageSrc: SSRickAndMorty,
+    },
     {
         projectName: 'Your Thoughts',
         description: 'Social Media for sharing your thoughts, and let other people comment about that. (still not finish though)',
