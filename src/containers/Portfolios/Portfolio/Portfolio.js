@@ -13,7 +13,7 @@ const portfolio = (props) => {
             <div className="portfolio-container animated zoomInLeft">
                 <LazyLoadImage
                     alt={dataApp.projectName}
-                    src={dataApp.imageSrc}
+                    src={dataApp.imageSrc? dataApp.imageSrc : "https://developersushant.files.wordpress.com/2015/02/no-image-available.png"}
                     className={"app-preview"}
                 />
                 <div className={"app-description"}>
@@ -26,8 +26,8 @@ const portfolio = (props) => {
                         ))}
                     </div>
                     <div className={"button-app-wrapper"}>
-                        <a href={dataApp.linkGithub} rel="noopener noreferrer" target="_blank" >Github</a>
-                        <a href={dataApp.linkApp} rel="noopener noreferrer" target="_blank" >View App</a>
+                        {dataApp.linkGithub && <a href={dataApp.linkGithub} rel="noopener noreferrer" target="_blank" >Github</a>}
+                        {dataApp.linkApp && <a href={dataApp.linkApp} rel="noopener noreferrer" target="_blank" >View App</a>}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 // SNAPSHOTS OF APPS
 import SSBukuCeritamu from './assets/gifs/snapshot_bukuceritamu.gif';
-import SSRandomCatsPicts from './assets/gifs/snapshot_randomcatpicts.gif';
+// import SSRandomCatsPicts from './assets/gifs/snapshot_randomcatpicts.gif';
 import SSJobFinder from './assets/gifs/snapshot_jobfinder.gif';
 import SSYourThoughts from './assets/gifs/snapshot_yourthoughts.gif';
 import SSRickAndMorty from './assets/gifs/snapshot_RickAndMortyEpisodes.gif';
@@ -17,6 +17,19 @@ const dataProjects = [
     //     linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
     //     imageSrc: SSRandomCatsPicts,
     // },
+    {
+        projectName: 'React BitQuran',
+        description: 'Lite weight Quran app on web. Made for reading purpose',
+        technologies: [
+            'React',
+            'React Router Dom',
+            'React Router',
+            'Axios',
+        ],
+        linkGithub: 'https://github.com/fadilnatakusumah/react-bitquran',
+        linkApp: null,
+        imageSrc: null,
+    },
     {
         projectName: 'Rick and Morty Episodes',
         description: 'Yeah my first Typescript app (I know it`s not the best, but hey). Finally I could accomplished understanding typescript with react',
