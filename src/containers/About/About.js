@@ -21,7 +21,7 @@ const Content = ({ isVisible }) => {
                         className={"profile-pict"}
                     />
                     <div>
-                        <p>Self taught Web Developer. Loves Javascript. Likes simple things</p>
+                        <p>A Web Developer. Loves Javascript. Likes simple things</p>
                         <hr />
                         <p>full name is <b>Muhammad Fadhilah Mulyana</b> but use to be called Fadil. Likes to play with React, React Native, Laravel, VueJS and others</p>
                         <p>I'm always eager to learn something new, and breath decent

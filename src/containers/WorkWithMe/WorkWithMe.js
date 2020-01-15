@@ -45,7 +45,7 @@ const Work = ({ isVisible }) => {
           <h2>Love to Learn</h2>
           <div>
             <p>
-              I always trying to keep up with the technologies, always trying to implements new ideas and make it into production
+              I'm always trying to keep up with the technologies, always trying to implements new ideas and make it into production
             </p>
           </div>
         </div>
