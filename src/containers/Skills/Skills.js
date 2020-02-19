@@ -7,20 +7,20 @@ import './Skills.css';
 import 'animate.css';
 
 const Skill = ({ isVisible }) => {
-  if (isVisible) {
+  // if (isVisible) {
     return (
       <div className="skills animated bounceInUp">
         <div className="card-skill">
           <h3>Front End Development</h3>
           <div>
             <ul>
-              <li>Javascript</li>
+              <li>Javascript (ES6), Typescript</li>
               <li>HTML5</li>
               <li>CSS3 (Flexbox)</li>
               <li>JQuery</li>
-              <li>React</li>
-              <li>React Native (novice)</li>
+              <li>React, React Native (novice)</li>
               <li>VueJS (novice)</li>
+              <li>Flutter (novice)</li>
             </ul>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Skill = ({ isVisible }) => {
             <ul>
               <li>NodeJS, Express (novice)</li>
               <li>Laravel, PHP</li>
-              <li>MySQL</li>
+              <li>MySQL, Mongo</li>
               <li>Rest API</li>
             </ul>
           </div>
@@ -49,17 +49,17 @@ const Skill = ({ isVisible }) => {
         </div>
       </div>
     )
-  }
-  return null
+  // }
+  // return null
 }
 
 const skills = () => (
   <ScrollableAnchor id={"skills"}>
     <div className="skills-container">
       <h1>Skills</h1>
-      <TrackVisibility once>
+      {/* <TrackVisibility once> */}
         <Skill />
-      </TrackVisibility>
+      {/* </TrackVisibility> */}
     </div>
   </ScrollableAnchor>
 )
