@@ -10,7 +10,7 @@ import './About.css';
 import 'animate.css';
 
 const Content = ({ isVisible }) => {
-    if (isVisible) {
+    // if (isVisible) {
         return (
             <div className="about animated bounceInRight">
                 <h1>About Me</h1>
@@ -23,8 +23,8 @@ const Content = ({ isVisible }) => {
                     <div>
                         <p>A Web Developer. Loves Javascript. Likes simple things</p>
                         <hr />
-                        <p>full name is <b>Muhammad Fadhilah Mulyana</b> but use to be called Fadil. Likes to play with React, React Native, Laravel, VueJS and others</p>
-                        <p>I'm always eager to learn something new, and breath decent
+                        <p>full name is <b>Muhammad Fadhilah Mulyana</b> but use to be called Fadil. Most of my time I work with React, but in my spare time I use to learn React Native, Vue, Flutter, and others.</p>
+                        <p>I always eager to learn something new, and breath decent
                             technology everyday with good architecture to
                         solving problems.</p>
                         <p>Current position: <b>Yogyakarta, Indonesia</b></p>
@@ -32,16 +32,16 @@ const Content = ({ isVisible }) => {
                 </div>
             </div>
         )
-    }
-    return null;
+    // }
+    // return null;
 }
 
 const about = () => (
     <ScrollableAnchor id={"about"}>
         <div className="about-container">
-            <TrackVisibility once>
+            {/* <TrackVisibility once> */}
                 <Content />
-            </TrackVisibility>
+            {/* </TrackVisibility> */}
         </div>
     </ScrollableAnchor>
 )
