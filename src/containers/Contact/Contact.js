@@ -7,7 +7,7 @@ import './Contact.css';
 import 'animate.css';
 
 const Contact = ({ isVisible }) => {
-  if (isVisible) {
+  // if (isVisible) {
     return (
       <div className="contact animated fadeInRight">
         <div className="connect-buttons">
@@ -26,8 +26,8 @@ const Contact = ({ isVisible }) => {
         </div>
       </div>
     )
-  }
-  return null
+  // }
+  // return null
 }
 
 const contactContainer = () => (
@@ -35,9 +35,9 @@ const contactContainer = () => (
     <div className="contact-container">
       <h1>Interested in working together?</h1>
       <h3>Just give me a shout!</h3>
-      <TrackVisibility once>
+      {/* <TrackVisibility once> */}
         <Contact />
-      </TrackVisibility>
+      {/* </TrackVisibility> */}
     </div>
   </ScrollableAnchor>
 )
