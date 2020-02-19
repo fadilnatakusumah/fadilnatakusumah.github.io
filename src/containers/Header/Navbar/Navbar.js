@@ -75,7 +75,7 @@ class Nav extends React.Component {
                 <a href="#contact" rel="noopener noreferrer">Contact Me</a>
               </li>
               <li>
-                <a style={{ color: 'purple' }} href="https://drive.google.com/file/d/1iWoaOj_tssL2l3IrmafEWYZo89GHGZJF/view" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a style={{ color: 'purple' }} href="https://drive.google.com/open?id=1ElJSXZs3NV9uNSKIaKFsoKa_1vMPGeYg" target="_blank" rel="noopener noreferrer">Resume</a>
               </li>
             </ul>
           </div>
