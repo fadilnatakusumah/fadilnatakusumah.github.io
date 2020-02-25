@@ -5,6 +5,8 @@ import SSJobFinder from './assets/gifs/snapshot_jobfinder.gif';
 import SSYourThoughts from './assets/gifs/snapshot_yourthoughts.gif';
 import SSRickAndMorty from './assets/gifs/snapshot_RickAndMortyEpisodes.gif';
 
+import ImageVuesco from './assets/images/vuesco.png';
+
 const dataProjects = [
     // {
     //     projectName: 'Random Cat Pictures',
@@ -17,6 +19,21 @@ const dataProjects = [
     //     linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
     //     imageSrc: SSRandomCatsPicts,
     // },
+    {
+        projectName: 'Vuesco',
+        description: 'Dummy project to learn Vue with Graphql and Express',
+        technologies: [
+            'Vue',
+            'Vuex',
+            'Graphql',
+            'Express-Graphql',
+            'express',
+            'jwt',
+        ],
+        linkGithub: 'https://github.com/fadilnatakusumah/vuesco/',
+        linkApp: null,
+        imageSrc: ImageVuesco,
+    },
     {
         projectName: 'React BitQuran',
         description: 'Lite weight Quran app on web. Made for reading purpose',
