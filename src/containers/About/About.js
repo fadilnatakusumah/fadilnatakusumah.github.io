@@ -18,7 +18,7 @@ const Content = ({ isVisible }) => {
                     <LazyLoadImage
                         alt={"profile-picture"}
                         src={ProfilePict}
-                        className={"profile-pict"}
+                        className={"avatar"}
                     />
                     <div>
                         <p>A Web Developer. Loves Javascript. Likes simple things</p>
