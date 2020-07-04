@@ -1,6 +1,6 @@
 .portfolios-container {
     min-height: 100vh;
-    padding   : 50px 30px;
+    padding   : 50px 15px;
 }
 
 .viewMoreProjects {
@@ -19,8 +19,22 @@
 }
 
 .viewMoreProjects a:hover {
-    font-size      : 2.6vmax;
+    font-size       : 2.6vmax;
     transition      : .5s;
     color           : white;
     background-color: purple;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .portfolios-container h1 {
+        font-size: 2em !important;
+    }
+
+    /* .image-wrapper {
+        width     : 100%;
+        height    : 100px;
+        text-align: center;
+        overflow  : hidden;
+    } */
 }
