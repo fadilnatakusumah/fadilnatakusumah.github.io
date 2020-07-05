@@ -17,7 +17,11 @@ const Skill = ({ isVisible }) => {
         <p>
           Mostly on Frontend side with <b>React</b> with <b>Javascript</b>.
         </p>
-        <p>But also little bit know about Typescript, React Native, Flutter, Nextjs, Vue, Nuxtjs, Nodejs (expressjs)</p>
+        <p>But also little bit know about Typescript, React Native, Flutter and Nextjs.
+        <br />
+          <a href="https://github.com/fadilnatakusumah/" target="__blank">Take a look at my side projects here </a>
+        </p>
+
         {/* <div>
             <ul>
               <li>Javascript (ES6), Typescript</li>
