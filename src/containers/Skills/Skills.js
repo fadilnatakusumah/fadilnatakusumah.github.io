@@ -8,11 +8,17 @@ import 'animate.css';
 
 const Skill = ({ isVisible }) => {
   // if (isVisible) {
-    return (
-      <div className="skills animated bounceInUp">
-        <div className="card-skill">
-          <h3>Front End Development</h3>
-          <div>
+  return (
+    <div className="skills animated bounceInUp">
+      <div className="card-skill">
+        <h4>
+          Main focus
+        </h4>
+        <p>
+          Mostly on Frontend side with <b>React</b> with <b>Javascript</b>.
+        </p>
+        <p>But also little bit know about Typescript, React Native, Flutter, Nextjs, Vue, Nuxtjs, Nodejs (expressjs)</p>
+        {/* <div>
             <ul>
               <li>Javascript (ES6), Typescript</li>
               <li>HTML5</li>
@@ -45,10 +51,21 @@ const Skill = ({ isVisible }) => {
               <li>Github, Bitbucket</li>
               <li>Postman</li>
             </ul>
-          </div>
+          </div> */}
+      </div>
+      <div className="card-skill">
+        <h4>Development Tool Kit</h4>
+        <div>
+          <ul>
+            <li>VS Code</li>
+            <li>Git</li>
+            <li>Github, Bitbucket</li>
+            <li>Postman</li>
+          </ul>
         </div>
       </div>
-    )
+    </div>
+  )
   // }
   // return null
 }
@@ -58,7 +75,7 @@ const skills = () => (
     <div className="skills-container">
       <h1>Skills</h1>
       {/* <TrackVisibility once> */}
-        <Skill />
+      <Skill />
       {/* </TrackVisibility> */}
     </div>
   </ScrollableAnchor>

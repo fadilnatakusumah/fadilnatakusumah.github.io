@@ -17,9 +17,9 @@
     align-items    : flex-start;
 }
 
-.skills h3 {
+.skills h4 {
     color    : rgb(55, 3, 104);
-    font-size: 3.0em;
+    font-size: 2.0em;
 }
 
 .card-skill {
@@ -32,6 +32,6 @@
     padding         : 35px;
 }
 
-.card-skill div ul {
-    font-size: 1.8em;
+.card-skill div ul, .card-skill p {
+    font-size: 1.5em;
 }
