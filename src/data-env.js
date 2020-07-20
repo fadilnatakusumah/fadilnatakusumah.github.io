@@ -49,7 +49,7 @@ const dataProjects = [
     },
     {
         projectName: 'Rick and Morty Episodes',
-        description: 'Yeah my first Typescript app (I know it`s not the best, but hey). Finally I could accomplished understanding typescript with react',
+        description: "Typescript react displaying Rick & Morty's episodes",
         technologies: [
             'React',
             'React UseEffect',
