@@ -101,7 +101,7 @@ const dataProjects = [
             'MySQL'
         ],
         linkGithub: 'https://github.com/fadilnatakusumah/bukuceritamu',
-        linkApp: 'https://fadilnatakusumah.000webhostapp.com/',
+        // linkApp: 'https://fadilnatakusumah.000webhostapp.com/',
         imageSrc: SSBukuCeritamu,
     },
 ]
