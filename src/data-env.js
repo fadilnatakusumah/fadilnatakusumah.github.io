@@ -4,6 +4,7 @@ import SSBukuCeritamu from './assets/gifs/snapshot_bukuceritamu.gif';
 import SSJobFinder from './assets/gifs/snapshot_jobfinder.gif';
 import SSYourThoughts from './assets/gifs/snapshot_yourthoughts.gif';
 import SSRickAndMorty from './assets/gifs/snapshot_RickAndMortyEpisodes.gif';
+import SSFirewatch from './assets/gifs/firewatch.gif';
 
 import ImageVuesco from './assets/images/vuesco.png';
 
@@ -19,6 +20,18 @@ const dataProjects = [
     //     linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
     //     imageSrc: SSRandomCatsPicts,
     // },
+    {
+        projectName: 'Firewatch',
+        description: `Firewatch Landing Page with Parallax effect`,
+        technologies: [
+            'HTML',
+            'CSS',
+            'Javascript',
+        ],
+        linkGithub: 'https://github.com/fadilnatakusumah/firewatch-page',
+        linkApp: 'https://fadilnatakusumah.github.io/firewatch-page/',
+        imageSrc: SSFirewatch,
+    },
     {
         projectName: 'Vuesco',
         description: 'Dummy project to learn Vue with Graphql and Express',
