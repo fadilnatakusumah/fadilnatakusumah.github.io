@@ -1,0 +1,10 @@
+.projectList {
+  display : flex;
+  overflow: hidden;
+
+  >div {
+    img {
+      width: 100px;
+    }
+  }
+}

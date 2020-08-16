@@ -1,0 +1,80 @@
+.profileContainer {
+  color     : white;
+  text-align: center;
+
+  >img {
+    margin       : 14px 0;
+    border-radius: 15px;
+    width        : 300px;
+  }
+
+  .buttonContainer {
+    display        : flex;
+    justify-content: center;
+    gap            : 20px;
+    flex-wrap      : wrap;
+  }
+
+  .active {
+    box-shadow: 1px 0px 7px 0px #fff;
+  }
+
+  .info {
+    padding       : 25px 0;
+    padding       : 25px 0;
+    text-align    : center;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+    >p {
+      max-width: 600px;
+    }
+
+    >h5 {
+      margin: 10px 0;
+    }
+
+    >div.techStack {
+      display        : flex;
+      gap            : 10px;
+      flex-wrap      : wrap;
+      justify-content: center;
+
+      >.skill {
+        border         : 1px solid #fff;
+        border-radius  : 5px;
+        padding        : 3px 8px;
+        display        : flex;
+        justify-content: space-evenly;
+        flex-wrap      : wrap;
+        align-items    : center;
+        cursor         : pointer;
+
+        &:hover {
+          box-shadow: 0px 0px 10px 0px #fff;
+        }
+
+        img {
+          padding: 5px;
+          width  : 25px;
+        }
+      }
+    }
+
+    >div.socialContacts {
+      >a {
+        margin: 0 15px;
+
+        img {
+          transition: .5s;
+          height    : 2.5em;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
