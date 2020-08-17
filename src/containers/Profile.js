@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaLaptopCode, FaInfoCircle } from 'react-icons/fa'
+import { FaLaptopCode, FaInfoCircle, FaEnvelope, FaDownload } from 'react-icons/fa'
 import ProfileImage from '../assets/images/preview.jpg'
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -35,9 +35,9 @@ const ProfileAnimateVariants = {
   },
   exit: {
     x: "-100vh",
+    opacity: 0,
     transition: { ease: 'easeInOut' }
   }
-
 }
 
 const InfoAnimateVariants = {
@@ -56,6 +56,7 @@ const InfoAnimateVariants = {
   },
   exit: {
     x: "-100vh",
+    opacity: 0,
     transition: { ease: 'easeInOut' }
   }
 }
@@ -81,15 +82,6 @@ const socialAnimateVariants = {
 function Profile() {
   const [mode, toggleMode] = useState('about');
 
-  const renderInfo = (type) => {
-    switch (type) {
-      case "about":
-        return <AboutMe />
-      default:
-        return <TechStack />
-    }
-  }
-
   return (
     <motion.div className="profileContainer"
       variants={ProfileAnimateVariants}
@@ -100,16 +92,20 @@ function Profile() {
       <img src={ProfileImage} />
       <div>
         <h3>Muhammad Fadhilah Mulyana</h3>
-        <h4>Software Engineer | fadil.ntksmh@gmail.com </h4>
+        <h4>Software Engineer</h4>
+        <h6><FaEnvelope /> fadil.ntksmh@gmail.com </h6>
         <hr />
         <div>
-          <div className="buttonContainer">
+          <div className="buttonsContainer">
             <button className={`button ${mode === "about" ? "active" : ""}`} onClick={() => toggleMode('about')}>
               <FaInfoCircle /> &nbsp; About Me
             </button>
             <button className={`button ${mode === "techStack" ? "active" : ""}`} onClick={() => toggleMode('techStack')}>
               <FaLaptopCode /> &nbsp; Skills and Technologies
             </button>
+            <a target="_blank" className={`button`} href="https://drive.google.com/file/d/1aKGsdIcNn7ccxxaUPDwlvKu1ujx7766y/view">
+              <FaDownload /> &nbsp; Download Resume
+            </a>
           </div>
           <AnimatePresence exitBeforeEnter >
             {mode === "about"
@@ -134,7 +130,7 @@ const AboutMe = () => (
     <p>
       A Web Developer. Loves Javascript. Likes simple things. Mostly work with React, but in my spare time I use to learn React Native, Vue, Flutter, and others.
       I always eager to learn something new, and breath decent technology everyday with good architecture to solving problems.
-      Current position: Yogyakarta, Indonesia (Available to relocate)
+      <br />Current position: <b>Yogyakarta, Indonesia</b> (Available to relocate)
     </p>
 
     <motion.div variants={socialAnimateVariants} className="socialContacts">

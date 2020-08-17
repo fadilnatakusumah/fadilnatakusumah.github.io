@@ -1,18 +1,45 @@
+@mixin mq($from) {
+  @media (max-width: $from) {
+    @content;
+  }
+}
+
 .profileContainer {
   color     : white;
   text-align: center;
 
+  >div {
+    h4 {
+      color: gold;
+    }
+
+    h6 {
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+
+      svg {
+        margin: 0 5px;
+      }
+    }
+  }
+
   >img {
     margin       : 14px 0;
     border-radius: 15px;
-    width        : 300px;
+    max-width    : 300px;
+    width        : 100%;
   }
 
-  .buttonContainer {
+  .buttonsContainer {
     display        : flex;
     justify-content: center;
     gap            : 20px;
     flex-wrap      : wrap;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .active {
@@ -20,8 +47,7 @@
   }
 
   .info {
-    padding       : 25px 0;
-    padding       : 25px 0;
+    padding       : 25px 10px;
     text-align    : center;
     display       : flex;
     flex-direction: column;
@@ -32,6 +58,7 @@
     }
 
     >h5 {
+      color : gold;
       margin: 10px 0;
     }
 
@@ -49,7 +76,8 @@
         justify-content: space-evenly;
         flex-wrap      : wrap;
         align-items    : center;
-        cursor         : pointer;
+        transition     : .5s;
+        ;
 
         &:hover {
           box-shadow: 0px 0px 10px 0px #fff;
@@ -71,9 +99,61 @@
           height    : 2.5em;
 
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
           }
         }
+      }
+    }
+  }
+}
+
+
+@include mq('700px') {
+  .profileContainer {
+
+    >img {
+      margin       : 14px 0;
+      border-radius: 15px;
+      max-width    : 200px;
+      width        : 100%;
+    }
+
+    >div {
+
+      h3,
+      h4,
+      h6 {
+        font-size: 1.2em;
+      }
+
+      >div .buttonsContainer {
+        >button,
+        a {
+          display: inline-flex;
+          align-items: center;
+          font-size  : 10px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .info {
+
+      // padding       : 25px 0;
+      // padding       : 25px 0;
+      // text-align    : center;
+      // display       : flex;
+      // flex-direction: column;
+      // align-items   : center;
+      .socialContacts {
+        a img {
+          height: 25px !important;
+        }
+      }
+
+      >p {
+        font-size: 14px;
+        max-width: 600px;
       }
     }
   }

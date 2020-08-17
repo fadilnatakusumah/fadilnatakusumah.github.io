@@ -1,19 +1,22 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
 function Header() {
   return (
     <div>
       <NavStyled>
-        <NavLink to="/">
+        <NavLink to="/" key="/">
           About Me
         </NavLink>
-        <NavLink to="/projects">
+        <NavLink to="/projects" key="/projects">
           Projects
         </NavLink>
-        <NavLink to="/contacts">
-          About Me
+        <NavLink to="/contacts" key="/contacts">
+          Contacts
         </NavLink>
+        {/* <NavLink to="/contacts">
+          About Me
+        </NavLink> */}
       </NavStyled>
     </div>
   )
@@ -26,6 +29,8 @@ const NavStyled = styled.div`
     padding: 15px
 
     >a{
+      white-space: nowrap;
+      font-weight: 600;
       padding: 2px 15px;
       text-decoration: none;
       color:white;
@@ -40,6 +45,10 @@ const NavStyled = styled.div`
         transition: .5s;
         background:white;
         color: purple;
+      }
+
+      @media (max-width: 700px){
+        font-size: 12px;
       }
     }
   `
