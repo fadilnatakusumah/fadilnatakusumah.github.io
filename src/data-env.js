@@ -5,6 +5,8 @@ import SSJobFinder from './assets/gifs/snapshot_jobfinder.gif';
 import SSYourThoughts from './assets/gifs/snapshot_yourthoughts.gif';
 import SSRickAndMorty from './assets/gifs/snapshot_RickAndMortyEpisodes.gif';
 import SSFirewatch from './assets/gifs/firewatch.gif';
+import SSBitQuran from './assets/gifs/bitQuran.gif';
+import SSRealworldApp from './assets/gifs/realworldApp.gif';
 
 import ImageVuesco from './assets/images/vuesco.png';
 
@@ -21,44 +23,60 @@ const dataProjects = [
     //     imageSrc: SSRandomCatsPicts,
     // },
     {
+        projectName: 'BitQuran',
+        description: 'Lite weight Quran app on web. Made for reading purpose',
+        technologies: [
+            'React',
+            'React Router Dom',
+            'React Router',
+            'Emotion',
+            'Axios',
+        ],
+        linkGithub: 'https://github.com/fadilnatakusumah/react-bitquran',
+        linkApp: 'https://fadilnatakusumah.github.io/react-bitquran/',
+        imageSrc: SSBitQuran,
+    },
+    {
         projectName: 'Firewatch',
         description: `Firewatch Landing Page with Parallax effect`,
         technologies: [
             'HTML',
             'CSS',
             'Javascript',
+            'GSAP Animation'
         ],
         linkGithub: 'https://github.com/fadilnatakusumah/firewatch-page',
         linkApp: 'https://fadilnatakusumah.github.io/firewatch-page/',
         imageSrc: SSFirewatch,
     },
-    // {
-    //     projectName: 'Vuesco',
-    //     description: 'Dummy project to learn Vue with Graphql and Express',
-    //     technologies: [
-    //         'Vue',
-    //         'Vuex',
-    //         'Graphql',
-    //         'Express-Graphql',
-    //         'express',
-    //         'jwt',
-    //     ],
-    //     linkGithub: 'https://github.com/fadilnatakusumah/vuesco/',
-    //     linkApp: null,
-    //     imageSrc: ImageVuesco,
-    // },
     {
-        projectName: 'React BitQuran',
-        description: 'Lite weight Quran app on web. Made for reading purpose',
+        projectName: 'Real World App',
+        description: 'Learning Vue with Typescript based on RealWorldApp',
         technologies: [
-            'React',
-            'React Router Dom',
-            'React Router',
-            'Axios',
+            'Vue',
+            'Vue Class Component',
+            'Vue Property Decorator',
+            'Vuex Module Decorators',
+            'Vuex',
         ],
-        linkGithub: 'https://github.com/fadilnatakusumah/react-bitquran',
+        linkGithub: 'https://github.com/fadilnatakusumah/realworldapp-vue-ts',
+        linkApp: 'https://fadilnatakusumah.github.io/realworldapp-vue-ts/',
+        imageSrc: SSRealworldApp,
+    },
+    {
+        projectName: 'Vuesco',
+        description: 'Dummy project for learning Vue with Graphql and Express',
+        technologies: [
+            'Vue',
+            'Vuex',
+            'Graphql',
+            'Express-Graphql',
+            'express',
+            'jwt',
+        ],
+        linkGithub: 'https://github.com/fadilnatakusumah/vuesco/',
         linkApp: null,
-        imageSrc: null,
+        imageSrc: ImageVuesco,
     },
     {
         projectName: 'Rick and Morty Episodes',
@@ -93,7 +111,7 @@ const dataProjects = [
         projectName: 'Job Finder',
         description: 'An App that provides jobs information at your area, and you can save the job first or directly apply to it',
         technologies: [
-            'React Native',
+            'React Native (Expo)',
             'React Native Navigation',
             'Redux',
             'Redux-Thunk',
