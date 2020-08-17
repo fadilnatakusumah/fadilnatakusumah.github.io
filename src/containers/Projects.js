@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { FaCode, FaGlobe } from 'react-icons/fa'
-import dataProjects from '../data-env'
-import './Projects.scss'
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaCode, FaGlobe } from 'react-icons/fa'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+import './Projects.scss'
+import dataProjects from '../data-env'
 
 const ProjectAnimateVariants = {
   hidden: {
@@ -49,7 +51,7 @@ function Projects() {
             exit={{ opacity: 0 }}
             className="selectedProject">
             <div key={selectedProject.projectName || "none"}>
-              <img src={selectedProject.imageSrc} />
+              <LazyLoadImage src={selectedProject.imageSrc} />
               <h4>{selectedProject.projectName}</h4>
               <h5>{selectedProject.description}</h5>
               <div>

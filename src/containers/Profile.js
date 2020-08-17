@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { FaLaptopCode, FaInfoCircle, FaEnvelope, FaDownload } from 'react-icons/fa'
-import ProfileImage from '../assets/images/preview.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import ProfileImage from '../assets/images/preview.jpg'
 import './Profile.scss'
+
 import emailIcon from '../assets/images/email_icon.png';
 import githubIcon from '../assets/images/github_icon.png';
 import linkedinIcon from '../assets/images/linkedin_icon.png';
@@ -89,7 +91,8 @@ function Profile() {
       initial="hidden"
       exit="exit"
     >
-      <img src={ProfileImage} />
+
+      <LazyLoadImage src={ProfileImage} alt="fadilnatakusumah-profileimage" />
       <div>
         <h3>Muhammad Fadhilah Mulyana</h3>
         <h4>Software Engineer</h4>
@@ -135,16 +138,16 @@ const AboutMe = () => (
 
     <motion.div variants={socialAnimateVariants} className="socialContacts">
       <a href="mailto:fadil.ntksmh@gmail.com" target="_blank" rel="noopener noreferrer" title="fadil.ntksmh@gmail.com">
-        <img alt="emailIcon" className={"iconImage"} src={emailIcon}></img>
+        <LazyLoadImage alt="emailIcon" className={"iconImage"} src={emailIcon}></LazyLoadImage>
       </a>
       <a href="https://github.com/fadilnatakusumah" target="_blank" rel="noopener noreferrer" title="GITHUB | fadilnatakusumah">
-        <img alt="githubIcon" className={"iconImage"} src={githubIcon}></img>
+        <LazyLoadImage alt="githubIcon" className={"iconImage"} src={githubIcon}></LazyLoadImage>
       </a>
       <a href="https://linkedin.com/in/muhammad-fadhilah-mulyana" target="_blank" rel="noopener noreferrer" title="LINKEDIN | Muhammad Fadhilah Mulyana">
-        <img alt="linkedIcon" className={"iconImage"} src={linkedinIcon}></img>
+        <LazyLoadImage alt="linkedIcon" className={"iconImage"} src={linkedinIcon}></LazyLoadImage>
       </a>
       <a href="https://www.hackerrank.com/fadil_ntksmh" target="_blank" rel="noopener noreferrer" title="HACKERRANK | fadil_ntksmh">
-        <img alt="hackerrankIcon" className={"iconImage"} src={hackerrankIcon}></img>
+        <LazyLoadImage alt="hackerrankIcon" className={"iconImage"} src={hackerrankIcon}></LazyLoadImage>
       </a>
     </motion.div>
   </motion.div>
@@ -161,28 +164,28 @@ const TechStack = () => (
     <h5>Skills & Technologies</h5>
     <motion.div variants={socialAnimateVariants} className="techStack">
       <div className="skill">
-        <img src={html5} /> HTML5
+        <LazyLoadImage src={html5} /> HTML5
       </div>
       <div className="skill">
-        <img src={css3} /> CSS3
+        <LazyLoadImage src={css3} /> CSS3
       </div>
       <div className="skill">
-        <img src={javascript} /> Javascript
+        <LazyLoadImage src={javascript} /> Javascript
       </div>
       <div className="skill">
-        <img src={typescript} /> Typescript
+        <LazyLoadImage src={typescript} /> Typescript
       </div>
       <div className="skill">
-        <img src={react} /> React
+        <LazyLoadImage src={react} /> React
       </div>
       <div className="skill">
-        <img src={vue} /> Vue
+        <LazyLoadImage src={vue} /> Vue
       </div>
       <div className="skill">
-        <img src={nodejs} /> NodeJS
+        <LazyLoadImage src={nodejs} /> NodeJS
       </div>
       <div className="skill">
-        <img src={flutter} /> Flutter
+        <LazyLoadImage src={flutter} /> Flutter
       </div>
     </motion.div>
     {/* <a href="mailto:fadil.ntksmh@gmail.com" target="_blank" rel="noopener noreferrer" title="fadil.ntksmh@gmail.com">
