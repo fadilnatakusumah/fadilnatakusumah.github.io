@@ -106,7 +106,7 @@ function Profile() {
             <button className={`button ${mode === "techStack" ? "active" : ""}`} onClick={() => toggleMode('techStack')}>
               <FaLaptopCode /> &nbsp; Skills and Technologies
             </button>
-            <a target="_blank" className={`button`} href="https://drive.google.com/file/d/1aKGsdIcNn7ccxxaUPDwlvKu1ujx7766y/view">
+            <a target="_blank" className={`button`} href="https://drive.google.com/file/d/12y92QCDx7rsL7droLik6qJXHI3_iVW94/view?usp=sharing">
               <FaDownload /> &nbsp; Download Resume
             </a>
           </div>
@@ -131,7 +131,7 @@ const AboutMe = () => (
   >
     <h5>About Me</h5>
     <p>
-      A Web Developer. Loves Javascript. Likes simple things. Mostly work with React, but in my spare time I use to learn React Native, Vue, Flutter, and others.
+      A Web Developer, mostly work with React. In my spare time I use to learn React Native, Vue, Flutter, and others.
       I always eager to learn something new, and breath decent technology everyday with good architecture to solving problems.
       <br />Current position: <b>Yogyakarta, Indonesia</b> (Available to relocate)
     </p>
