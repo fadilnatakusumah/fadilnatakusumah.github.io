@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCode, FaGlobe } from 'react-icons/fa'
+import { FaCode, FaGlobe, FaLock } from 'react-icons/fa'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import './Projects.scss'
@@ -51,16 +51,25 @@ function Projects() {
             exit={{ opacity: 0 }}
             className="selectedProject">
             <div key={selectedProject.projectName || "none"}>
-              <LazyLoadImage src={selectedProject.imageSrc} />
+              <div className="image-container">
+                <LazyLoadImage src={selectedProject.imageSrc} />
+              </div>
               <h4>{selectedProject.projectName}</h4>
               <h5>{selectedProject.description}</h5>
               <div>
                 <strong>Technologies</strong>: {selectedProject.technologies.join(', ')}
               </div>
-              <div className="buttonsContainer">
-                <a target="_blank" href={selectedProject.linkGithub} className="button"><FaCode />Github</a>
-                {selectedProject.linkApp && <a target="_blank" href={selectedProject.linkApp} className="button"><FaGlobe />View App</a>}
-              </div>
+              {selectedProject.private ?
+                <div className="buttonsContainer">
+                  <a className="button">
+                    {selectedProject.wip ? "This is project is still work in progress" : <span>Github &nbsp;<FaLock /></span>}
+                  </a>
+                </div>
+                :
+                <div className="buttonsContainer">
+                  <a target="_blank" href={selectedProject.linkGithub} className="button"><FaCode />Github</a>
+                  {selectedProject.linkApp && <a target="_blank" href={selectedProject.linkApp} className="button"><FaGlobe />View App</a>}
+                </div>}
             </div>
           </motion.div>}
       </AnimatePresence>

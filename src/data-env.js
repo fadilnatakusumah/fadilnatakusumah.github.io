@@ -7,6 +7,8 @@ import SSRickAndMorty from './assets/gifs/snapshot_RickAndMortyEpisodes.gif';
 import SSFirewatch from './assets/gifs/firewatch.gif';
 import SSBitQuran from './assets/gifs/bitQuran.gif';
 import SSRealworldApp from './assets/gifs/realworldApp.gif';
+import SSArtikelIslam from './assets/gifs/preview_artikel_islam.gif';
+import SSIbadaty from './assets/gifs/preview_ibadaty.gif';
 
 import ImageVuesco from './assets/images/vuesco.png';
 
@@ -22,6 +24,30 @@ const dataProjects = [
     //     linkApp: 'https://fadilnatakusumah.github.io/react-randomcat-api/',
     //     imageSrc: SSRandomCatsPicts,
     // },
+    {
+        projectName: 'Artikel Islam',
+        description: 'App for reading Islamic articles from trusted websites like Konsultasisyariah.com, Muslim.or.id, Muslimah.or.id, and many more. The app let you save articles for reading in offline mode.',
+        technologies: [
+            'Flutter',
+        ],
+        private: true,
+        wip: true,
+        linkGithub: 'https://github.com/fadilnatakusumah/react-bitquran',
+        linkApp: 'https://fadilnatakusumah.github.io/react-bitquran/',
+        imageSrc: SSArtikelIslam,
+    },
+    {
+        projectName: 'Ibadaty',
+        description: 'App for learning about Islam. It contains about information to do the shalah, prayers, dzikrs, and many more.',
+        technologies: [
+            'Flutter',
+        ],
+        private: true,
+        wip: true,
+        linkGithub: 'https://github.com/fadilnatakusumah/react-bitquran',
+        linkApp: 'https://fadilnatakusumah.github.io/react-bitquran/',
+        imageSrc: SSIbadaty,
+    },
     {
         projectName: 'BitQuran',
         description: 'Lite weight Quran app on web. Made for reading purpose',
