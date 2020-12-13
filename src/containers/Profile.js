@@ -132,7 +132,7 @@ const AboutMe = () => (
     <h5>About Me</h5>
     <p>
       A Web Developer, mostly work with React. In my spare time I use to learn React Native, Vue, Flutter, and others.
-      I always eager to learn something new, and breath decent technology everyday with good architecture to solving problems.
+      I always eager to learn something new, and breath decent technology to solving everyday problems.
       <br />Current position: <b>Yogyakarta, Indonesia</b> (Available to relocate)
     </p>
 
