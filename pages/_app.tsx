@@ -1,10 +1,25 @@
 import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import { MyTheme } from '../lib/theme';
 import '../styles/globals.css';
 
+
+export async function getStaticPaths() {
+  return {
+    fallback: true,
+    paths: []
+  }
+}
+
 function MyApp({ Component, pageProps }): JSX.Element {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <h1>Loading...</h1>
+  }
+
   return (
     <ThemeProvider>
       <MyTheme />
