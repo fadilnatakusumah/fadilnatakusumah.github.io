@@ -1,23 +1,22 @@
 import { Layout } from "../components/Layout";
 import { AppContextType } from "next/dist/next-server/lib/utils";
-
-import { ProjectProps, WebProjects } from "../lib/projects";
+import { MobileProjects, ProjectProps } from "../lib/projects";
 import { Wrapper } from "../components/Wrapper";
 import { Card } from "../components/Card";
 
-interface HomePageProps {
+interface MobilePageProps {
   projects: ProjectProps[]
 }
 
-export default function HomePage({ projects }: HomePageProps): JSX.Element {
+export default function MobilePage({ projects }: MobilePageProps): JSX.Element {
   return (
     <Layout
-      pageId={"web"}
-      title="Web Projects"
+      pageId={"mobile"}
+      title="Mobile App Projects"
       description="All the web projects that has been done"
     >
       <Wrapper>
-        <h2 className="title">Web Projects</h2>
+        <h2 className="title">Mobile App Projects</h2>
         <div className="card-container">
           {projects.map((project, i) => (
             <Card project={project} key={i} />
@@ -41,8 +40,8 @@ export default function HomePage({ projects }: HomePageProps): JSX.Element {
 }
 
 
-HomePage.getInitialProps = (ctx: AppContextType) => {
+MobilePage.getInitialProps = (ctx: AppContextType) => {
   return {
-    projects: WebProjects
+    projects: MobileProjects
   }
 }

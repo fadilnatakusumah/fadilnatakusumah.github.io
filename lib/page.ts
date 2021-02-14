@@ -1,0 +1,1 @@
+export type pageId = "web" | "mobile" | "resume" | "about" | "contact";
