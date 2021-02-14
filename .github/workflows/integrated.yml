@@ -12,12 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
@@ -25,12 +24,23 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - run: npm run export
       
+
+    - name: Installing my packages
+      run: npm ci
+
+    - name: Build my App  
+      run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /fadilnatakusumah.github.io
+    - run: npm run export
+      env:
+        NEXT_PUBLIC_BASE_PATH: /fadilnatakusumah.github.io
+    - run: touch ./out/.nojekyll
+    
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.0.0
+      uses: JamesIves/github-pages-deploy-action@3.5.9
       with:
-        branch: master # The branch the action should deploy to.
-        folder: out # The folder the action should deploy.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: master # The branch the action should deploy to.
+        FOLDER: out # The folder the action should deploy.
