@@ -98,24 +98,14 @@ export function Card({ project }: CardProps) {
     <>
       {showImage && <PreviewImage image={showImage} setShowImage={setShowImage} />}
       <CardStyled>
-        {project.image.startsWith("http")
-          ? <img
-            className="image-thumbnail"
-            src={project.image}
-            alt={project.title}
-            width={300}
-            height={160}
-            onClick={() => setShowImage(project.image)}
-          />
-          :
-          <Image
-            className="image-thumbnail"
-            src={project.image}
-            alt={project.title}
-            width={300}
-            height={160}
-            onClick={() => setShowImage(project.image)}
-          />}
+        <img
+          className="image-thumbnail"
+          src={project.image}
+          alt={project.title}
+          width={300}
+          height={160}
+          onClick={() => setShowImage(project.image)}
+        />
         <div className="project-description">
           <div className="text-content">
             <h3>
