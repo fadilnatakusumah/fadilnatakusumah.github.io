@@ -1,5 +1,3 @@
-const isProd = (process.env.NODE_ENV || 'production') === 'production';
-
 module.exports = {
   publicRuntimeConfig: {
     APP_NAME: "Portfolio | Muhammad Fadhilah Mulyana",
@@ -11,5 +9,6 @@ module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
   }),
-  assetPrefix: isProd ? 'fadilnatakusumah.github.io' : '',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
 }
