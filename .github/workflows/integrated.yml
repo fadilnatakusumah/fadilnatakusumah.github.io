@@ -16,7 +16,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [15.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
@@ -32,14 +33,14 @@ jobs:
     - name: Build my App  
       run: npm run build
       env:
-        NEXT_PUBLIC_BASE_PATH: /fadilnatakusumah.github.io
+        NEXT_PUBLIC_BASE_PATH: fadilnatakusumah.github.io
     - run: npm run export
       env:
-        NEXT_PUBLIC_BASE_PATH: /fadilnatakusumah.github.io
+        NEXT_PUBLIC_BASE_PATH: fadilnatakusumah.github.io
     - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.5.9
+      uses: JamesIves/github-pages-deploy-action@4.0.0
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master # The branch the action should deploy to.
