@@ -1,12 +1,34 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import { APP_NAME, DOMAIN } from '../config'
 import { pageId } from '../lib/page'
 import { Footer } from './Footer'
 import { Header } from './Header'
 
+const AnimateVariants = {
+  hidden: {
+    opacity: 0,
+    // x: '-100vw',
+  },
+  visible: {
+    opacity: 1,
+    // x: '0',
+    transition: {
+      staggerChildren: 0.2,
+      duration: 2,
+      type: 'spring',
+      when: "beforeChildren",
+    }
+  },
+  exit: {
+    // x: "-100vh",
+    opacity: 0,
+    transition: { ease: 'easeInOut' }
+  }
+}
 export interface LayoutProps {
   pageId: pageId,
   title?: string,
@@ -40,7 +62,15 @@ export function Layout({
       </Head>
       <div>
         <Header pageId={pageId} />
-        <main>{children}</main>
+        <main>
+          <motion.div
+            variants={AnimateVariants}
+            animate="visible"
+            initial="hidden"
+            exit="exit">
+            {children}
+          </motion.div>
+        </main>
         <style jsx>{`
         div {
           min-height: 100vh;
