@@ -55,8 +55,8 @@ export function Layout({
         <meta name="og:url" content={`${DOMAIN}/${router.pathname}`} />
         <meta name="og:site_name" content={`${APP_NAME}`} />
 
-        <meta name="og:image" content={`/assets/images/profile-photo.jpg`} />
-        <meta name="og:image:secure_url" content={`/assets/images/profile-photo.jpg`} />
+        <meta name="og:image" content={`${DOMAIN}/assets/images/profile-photo.jpg`} />
+        <meta name="og:image:secure_url" content={`${DOMAIN}/assets/images/profile-photo.jpg`} />
         <meta name="og:image:type" content={`image/jpg`} />
         <meta name="fb:350804358856723" content={`${APP_NAME}`} />
       </Head>
