@@ -86,11 +86,11 @@ export const MobileProjects = [
     title: "Artikel Islam",
     repo: "https://github.com/fadilnatakusumah/artikel-islam-app",
     url: "",
-    description: 'App for reading Islamic articles from trusted websites like Konsultasisyariah.com, Muslim.or.id, Muslimah.or.id, and many more. The app let you save articles for reading in offline mode.',
+    description: 'App for reading Islamic articles from trusted websites like Konsultasisyariah.com, Muslim.or.id, Muslimah.or.id, and many more will be added. The app let you save articles for reading in offline mode.',
     stacks: [
       'Flutter'
     ],
-    image: "/assets/images/project/preview_artikel_islam.gif",
+    image: "/assets/images/project/artikel_islam_preview.gif",
     wip: true,
     private: false,
   },
