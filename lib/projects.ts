@@ -85,7 +85,7 @@ export const MobileProjects = [
   {
     title: "Artikel Islam",
     repo: "https://github.com/fadilnatakusumah/artikel-islam-app",
-    url: "",
+    url: "https://play.google.com/store/apps/details?id=com.fadilnatakusumah.artikel_islam",
     description: 'App for reading Islamic articles from trusted websites like Konsultasisyariah.com, Muslim.or.id, Muslimah.or.id, and many more will be added. The app let you save articles for reading in offline mode.',
     stacks: [
       'Flutter'
