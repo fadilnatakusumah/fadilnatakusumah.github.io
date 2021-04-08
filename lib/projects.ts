@@ -12,6 +12,16 @@ export interface ProjectProps {
 
 export const WebProjects = [
   {
+    title: "Catch a pokemon",
+    repo: "https://github.com/fadilnatakusumah/catch-a-pokemon",
+    url: "https://ecstatic-kare-e8f0f5.netlify.app/",
+    description: "Choose a pokemon, capturing, renaming and releasing a pokemon. Also read info about it and what’s skill it has. Built with mobile-first design.",
+    stacks: ["Typescript", "Apollo Client", "React Hooks", "Emotion"],
+    image: "/assets/images/project/catch_a_pokemon.gif",
+    wip: false,
+    private: false,
+  },
+  {
     title: "React BitQuran",
     repo: "https://github.com/fadilnatakusumah/react-bitquran",
     url: "https://fadilnatakusumah.github.io/react-bitquran/",
