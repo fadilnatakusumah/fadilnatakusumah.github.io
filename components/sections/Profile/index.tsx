@@ -16,7 +16,7 @@ export default function Profile() {
       <div className="image-profile">
         <Image
           className="image-profile__img"
-          src={`${DOMAIN}/assets/images/profile-photo.jpg`}
+          src={`/assets/images/profile-photo.jpg`}
           alt="me"
           width="130"
           height="130"
