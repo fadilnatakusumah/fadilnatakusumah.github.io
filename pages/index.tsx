@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Footer } from "../components/commons/Footer";
+import { Header } from "../components/commons/Header";
 import Navbar from "../components/commons/Navbar";
 import { Experiences } from "../components/sections/Experiences";
 import Profile from "../components/sections/Profile";
 import { Projects } from "../components/sections/Projects";
-
 
 const AnimateVariants = {
   hidden: {
@@ -31,6 +31,7 @@ const AnimateVariants = {
 export default function HomePage(): JSX.Element {
   return (
     <>
+      <Header />
       <motion.div
         variants={AnimateVariants}
         animate="visible"
