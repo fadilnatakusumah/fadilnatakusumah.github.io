@@ -1,48 +1,48 @@
-import { Layout } from "../components/Layout";
-import { AppContextType } from "next/dist/next-server/lib/utils";
+import { motion } from "framer-motion";
+import { Footer } from "../components/commons/Footer";
+import Navbar from "../components/commons/Navbar";
+import { Experiences } from "../components/sections/Experiences";
+import Profile from "../components/sections/Profile";
+import { Projects } from "../components/sections/Projects";
 
-import { ProjectProps, WebProjects } from "../lib/projects";
-import { Wrapper } from "../components/Wrapper";
-import { Card } from "../components/Card";
 
-interface HomePageProps {
-  projects: ProjectProps[]
-}
+const AnimateVariants = {
+  hidden: {
+    opacity: 0,
+    // x: '-100vw',
+  },
+  visible: {
+    opacity: 1,
+    // x: '0',
+    transition: {
+      staggerChildren: 0.2,
+      duration: 2,
+      type: "spring",
+      when: "beforeChildren",
+    },
+  },
+  exit: {
+    // x: "-100vh",
+    opacity: 0,
+    transition: { ease: "easeInOut" },
+  },
+};
 
-export default function HomePage({ projects }: HomePageProps): JSX.Element {
+export default function HomePage(): JSX.Element {
   return (
-    <Layout
-      pageId={"web"}
-      title="Web Projects"
-      description="All the web projects that has been done"
-    >
-      <Wrapper>
-        <h2 className="title">Web Projects</h2>
-        <div className="card-container">
-          {projects.map((project, i) => (
-            <Card project={project} key={i} />
-          ))}
-        </div>
-        <style jsx>
-          {`
-            h2.title {
-              text-align: center;
-              margin: 15px 0;
-            }
-
-            .card-container{
-              padding: 30px 0;
-            }
-          `}
-        </style>
-      </Wrapper>
-    </Layout>
-  )
-}
-
-
-HomePage.getInitialProps = (ctx: AppContextType) => {
-  return {
-    projects: WebProjects
-  }
+    <>
+      <motion.div
+        variants={AnimateVariants}
+        animate="visible"
+        initial="hidden"
+        exit="exit"
+      >
+        <Navbar />
+        <Profile />
+        <Experiences />
+        <Projects />
+        <Footer />
+      </motion.div>
+    </>
+  );
 }

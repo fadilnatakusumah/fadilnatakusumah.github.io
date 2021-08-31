@@ -1,32 +1,32 @@
 import { FaGithub, FaHackerrank, FaLinkedin } from "react-icons/fa";
 import styled from "styled-components";
-
-import { RESUME } from "../config";
-import { Wrapper } from "./Wrapper";
+import { GITHUB, HACKERRANK, LINKEDIN, RESUME } from "../../../config";
+import { mediaQuery } from "../../../helpers/style";
+import { Wrapper } from "../Wrapper";
 
 const FooterStyled = styled.footer`
   width: 100%;
-  background-color: var(--background-color);
-  border-top: 1px solid var(--font-color);
-  padding: 20px 0 30px;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--border-color);
 
-  .container{
+  .footer-container {
     display: flex;
-    gap:30px;
+    gap: 30px;
+    padding: 30px;
 
-    .links-container{
+    .links-container {
       width: 200px;
       ul li {
         list-style: none;
         margin: 20px 0;
-        >a{
+        > a {
           display: flex;
           align-items: center;
-          >svg {
+          > svg {
             margin-right: 10px;
           }
 
-          &:hover{
+          &:hover {
             color: var(--font-color-active);
           }
         }
@@ -34,36 +34,41 @@ const FooterStyled = styled.footer`
     }
   }
 
-  p{
-    margin-top: 20px;
+  p {
+    padding: 20px 30px;
+
+    ${mediaQuery({ max: 425 })(`
+      text-align: center;
+      font-size:12px;
+    `)}
   }
-`
+`;
 
 export function Footer() {
   return (
     <FooterStyled>
       <Wrapper>
-        <div className="container">
+        <div className="footer-container">
           <div className="links-container">
             <h4>Socials</h4>
             <ul className="links">
               <li>
-                <a href="https://www.hackerrank.com/fadil_ntksmh" target="_blank">
+                <a href={HACKERRANK} target="_blank">
                   <FaHackerrank />
-                    Hackerrank
-                  </a>
+                  Hackerrank
+                </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/muhammad-fadhilah-mulyana" target="_blank">
+                <a href={LINKEDIN} target="_blank">
                   <FaLinkedin />
-                    Linkedin
-                  </a>
+                  Linkedin
+                </a>
               </li>
               <li>
-                <a href="https://github.com/fadilnatakusumah" target="_blank">
+                <a href={GITHUB} target="_blank">
                   <FaGithub />
-                    Github
-                  </a>
+                  Github
+                </a>
               </li>
             </ul>
           </div>
@@ -73,21 +78,20 @@ export function Footer() {
               <li>
                 <a href={RESUME} target="_blank">
                   Resume
-                  </a>
+                </a>
               </li>
               <li>
                 <a href="mailto:fadil.ntksmh@gmail.com" target="_blank">
                   Contact
-                  </a>
+                </a>
               </li>
             </ul>
           </div>
         </div>
-        <p>
+        <p className="copyright">
           Copyright <b>Muhammad Fadhilah Mulyana</b> &copy; 2021
         </p>
-      </Wrapper >
-    </FooterStyled >
-  )
+      </Wrapper>
+    </FooterStyled>
+  );
 }
-

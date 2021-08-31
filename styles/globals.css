@@ -2,23 +2,44 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
+  height    : 100%;
+  width     : 100%;
+  overflow-y: auto;
+  padding   : 0;
+  margin    : 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  color           : var(--color-font);
+  background-color: var(--color-bg);
+}
+
 a {
-  color: inherit;
+  color          : inherit;
   text-decoration: none;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Karla', Arial, Helvetica, sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  margin                 : 0;
+  padding                : 0;
+  box-sizing             : border-box;
+  font-family            : 'Karla', Arial, Helvetica, sans-serif;
+  text-rendering         : optimizeLegibility;
+  -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+li {
+  list-style: none;
+}
+
+.pointer {
+  transition: 0.3s;
+  cursor    : pointer;
+}
+
+.pointer:hover {
+  transform: scale(1.1);
 }
