@@ -6,7 +6,7 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { DOMAIN, GITHUB, LINKEDIN, RESUME } from "../../../config";
+import { GITHUB, LINKEDIN, RESUME } from "../../../config";
 import Labels, { Label } from "../../commons/Labels";
 import StyledProfile from "./index.styled";
 

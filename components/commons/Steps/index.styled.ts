@@ -133,9 +133,9 @@ export const StyledStep = styled.div`
       > div {
         h3 a {
           transition: 0.3s;
-          color: var(--highlight-primary);
+          color: var(--company-link-color);
           :hover {
-            color: var(--highlight-primary-light);
+            color: var(--company-link-color-hover);
           }
         }
         .project-links {

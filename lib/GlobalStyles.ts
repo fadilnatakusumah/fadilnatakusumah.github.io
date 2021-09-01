@@ -18,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     --box-shadow-hover: 1px 1px 10px 0px rgba(0,0,0,0.3),
     -1px 3px 10px 0px rgba(0,0,0,0.2);
     --max-width: 1196px;
+
+    --company-link-color: #0053F7;
+    --company-link-color-hover: #5284EA;
   }
 
   [data-theme="dark"] {
@@ -35,6 +38,9 @@ export const GlobalStyle = createGlobalStyle`
     0 4px 13px rgba(200,200,200,0.13);
     --box-shadow-hover: 1px 1px 10px 0px rgba(200,200,200,0.3),
     -1px 3px 10px 0px rgba(200,200,200,0.2);
+
+    --company-link-color: #FF5154;
+    --company-link-color-hover: #F27778;
   }
 
 `;
