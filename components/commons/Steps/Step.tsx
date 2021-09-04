@@ -114,7 +114,7 @@ function Step({
                         rel="noreferrer noopener"
                       >
                         <FaGithub />
-                        View App
+                        View Code
                       </a>
                     </Label>
                   )}
