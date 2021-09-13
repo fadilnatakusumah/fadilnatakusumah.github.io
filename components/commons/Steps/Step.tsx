@@ -72,6 +72,7 @@ function Step({
         </small>
         <div className="company-title">
           <img
+            alt={`company-image - ${at}`}
             className={classnames(type === "projects" && "pointer")}
             src={image}
             onClick={type === "projects" ? () => setShowPreview(true) : null}

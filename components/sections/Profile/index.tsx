@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import {
   FaBookOpen,
   FaGithub,
@@ -17,13 +16,13 @@ export default function Profile() {
         <Image
           className="image-profile__img"
           src={`/assets/images/profile-photo.jpg`}
-          alt="me"
+          alt="me - fadilnatakusumah"
           width="130"
           height="130"
         />
       </div>
 
-      <h2 className="name">Muhammad Fadhilah Mulyana</h2>
+      <h1 className="name">Muhammad Fadhilah Mulyana</h1>
       <h3 className="title">Software Engineer</h3>
       <div className="info">
         &#8226; fadil.ntksmh@gmail.com &#8226;
