@@ -8,9 +8,12 @@ const StyledProfile = styled.section`
 
   .image-profile {
     border-radius: var(--border-radius);
-    padding: 8px 12px;
+    padding: 8px;
     margin: 25px;
     box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &__img {
       border-radius: var(--border-radius);
