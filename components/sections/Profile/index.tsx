@@ -23,7 +23,7 @@ export default function Profile() {
       </div>
 
       <h1 className="name">Muhammad Fadhilah Mulyana</h1>
-      <h3 className="title">Software Engineer</h3>
+      <h2 className="title">Software Engineer</h2>
       <div className="info">
         &#8226; fadil.ntksmh@gmail.com &#8226;
         {/* <small>

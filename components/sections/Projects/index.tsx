@@ -12,6 +12,7 @@ export function Projects() {
       <Steps type="projects">
         {PROJECTS.map((data, i) => (
           <Step
+            key={`projects_${i}_${data.title}`}
             title={data.title}
             techstacks={data.techstacks}
             descriptions={data.descriptions}

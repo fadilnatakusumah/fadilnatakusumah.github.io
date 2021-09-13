@@ -12,6 +12,7 @@ export function Experiences() {
       <Steps type="experiences">
         {EXPERIENCES.map((data, i) => (
           <Step
+            key={`experience_${i}_${data.title}`}
             title={data.title}
             techstacks={data.techstacks}
             descriptions={data.descriptions}
