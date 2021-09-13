@@ -1,10 +1,12 @@
 import fs from "fs";
+import { DOMAIN } from "../config";
+
 const Sitemap = () => {};
 
-export const getServerSideProps = ({ res }) => {
+export async function getServerSideProps({ res }) {
   const baseUrl = {
     development: "http://localhost:3000",
-    production: "./",
+    production: DOMAIN,
   }[process.env.NODE_ENV];
 
   const staticPages = fs
@@ -45,5 +47,5 @@ export const getServerSideProps = ({ res }) => {
   return {
     props: {},
   };
-};
+}
 export default Sitemap;
