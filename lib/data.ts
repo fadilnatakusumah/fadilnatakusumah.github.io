@@ -14,7 +14,7 @@ export const EXPERIENCES = [
     },
     techstacks: ["react", "redux", "styled-components"],
     descriptions: [
-      "Develop and maintain Bigflip.id (Flip.id B2B) web UI to facilitate best user experience to for b2b transfer services.",
+      "Develop and maintain Bigflip.id (Flip.id B2B) web UI to facilitate best user experience for b2b transfer services.",
     ],
   },
   {
