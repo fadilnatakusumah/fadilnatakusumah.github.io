@@ -63,7 +63,7 @@ export default function Profile() {
           <Label>Javascript</Label>
           <Label>React</Label>
           <Label>Graphql</Label>
-          <Label>Nodejs</Label>
+          <Label>NodeJS</Label>
           <Label>Flutter</Label>
           <Label>Vue</Label>
         </Labels>
