@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   FaBookOpen,
   FaGithub,
@@ -13,7 +12,7 @@ export default function Profile() {
   return (
     <StyledProfile>
       <div className="image-profile">
-        <Image
+        <img
           className="image-profile__img"
           src={`/assets/images/profile-photo.jpg`}
           alt="me - fadilnatakusumah"
