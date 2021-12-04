@@ -7,29 +7,30 @@ export function Header() {
     "Hi! My name is Fadil, and I'm a software engineer that always eager to learn in hope to solve everyday problems by using code.";
   return (
     <Head>
-      <title>{title}</title>
+      {/* <!-- Primary Meta Tags --> */}
+      <title>Portfolio - Muhammad Fadhilah Mulyana</title>
+      <meta name="title" content={title} />
       <meta name="description" content={description} />
-      <meta name="keywords" content="portfolio, fadilnatakusumah, react, frontend, articles, github, website, code"/>
-      <link rel="canonical" href={`${DOMAIN}`} />
-      <meta property="og:title" content={title} />
-      <meta name="og:description" content={description} />
-      <meta name="og:type" content="website" />
-      <meta name="og:url" content={`${DOMAIN}`} />
-      <meta name="og:site_name" content={`${APP_NAME}`} />
-      <meta name="og:site_name" content={`${APP_NAME}`} /> 
-      <meta name="og:keywords" content="portfolio, fadilnatakusumah, react, frontend, articles, github, website, code"/>
 
+      {/* <!-- Open Graph / Facebook --> */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={DOMAIN} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta
-        name="og:image"
-        itemProp="image"
+        property="og:image"
         content={`${DOMAIN}/assets/images/profile-photo.jpg`}
       />
+
+      {/* <!-- Twitter --> */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={DOMAIN} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
       <meta
-        name="og:image:secure_url"
+        property="twitter:image"
         content={`${DOMAIN}/assets/images/profile-photo.jpg`}
       />
-      <meta name="og:image:type" content={`image/jpg`} />
-      {/* <meta name="fb:350804358856723" content={`${APP_NAME}`} /> */}
     </Head>
   );
 }
