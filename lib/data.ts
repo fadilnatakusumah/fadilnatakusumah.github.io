@@ -5,6 +5,8 @@ export const EXPERIENCES = [
     title: "Frontend Developer",
     employment: "Full-time",
     at: "Flip.id",
+    about:
+      "Flip helps people send money securely without any transaction fee. Individual users are able to use Flip to send money across 14 biggest banks in Indonesia with zero cost. Meanwhile, business users can send money swiftly, securely, and with lower cost to more than 100 banks across Indonesia.",
     link: "https://flip.id",
     logo: "/assets/images/companies/flip.png",
     current: true,
@@ -12,7 +14,7 @@ export const EXPERIENCES = [
       from: "Jul 2021",
       to: "",
     },
-    techstacks: ["react", "redux", "styled-components"],
+    techstacks: ["react", "redux", "tailwind", "styled-components"],
     descriptions: [
       "Develop and maintain Bigflip.id (Flip.id B2B) web UI to facilitate best user experience for b2b transfer services.",
     ],
@@ -21,6 +23,8 @@ export const EXPERIENCES = [
     title: "Frontend Engineer",
     employment: "Full-time",
     at: "Codemi",
+    about:
+      "Codemi is a web based Learning Management System (LMS) that enable company to manage online training programs for employees and partners to improve their skills that could reduce cost, measurable and deploy rapidly.",
     link: "https://codemi.co.id/",
     logo: "/assets/images/companies/codemi.png",
     current: false,
@@ -34,6 +38,7 @@ export const EXPERIENCES = [
       "mobx",
       "redux",
       "xstate",
+      "bootstrap",
       "emotion",
     ],
     descriptions: [
@@ -45,6 +50,8 @@ export const EXPERIENCES = [
     title: "Assistant Lecture",
     employment: "Position",
     at: "Universitas Islam Indonesia",
+    about:
+      "Universitas Islam Indonesia (UII) is one of the leading private universities in Indonesia. Inspired by the spirit of nationalism and guided by perennial values, UII was founded one month before the proclamation of Indonesian independence in 1945. UII now has grown into a great place for learning. Located in the northern outskirt of Yogyakarta, the heart of Javanese culture, the main campus overlooks the stunning beauty of Merapi volcano, which is a perfect place to study.",
     link: "https://www.uii.ac.id/en/",
     logo: "/assets/images/companies/uii.png",
     current: false,
@@ -61,6 +68,8 @@ export const EXPERIENCES = [
     title: "Frontend Developer",
     employment: "Internship",
     at: "Javasign",
+    about:
+      'A software and design development company that resides in indonesia, a solid team who working passionately and professionally, an extension for other startup to help them build the digital product, part of our team is available for working together in co-location "a dynamic working partner who will put your success as priority, work with us and your startup will no longer be pie in the sky ! to make it even better we work on any budget"',
     link: "https://www.javasign.net/",
     logo: "/assets/images/companies/javasign.png",
     current: false,

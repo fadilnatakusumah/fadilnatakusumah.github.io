@@ -28,6 +28,7 @@ export interface StepProps {
   appLink?: string;
   githubLink?: string;
   type?: "experiences" | "projects";
+  about?: string;
 }
 
 function Step({
@@ -43,6 +44,7 @@ function Step({
   descriptions,
   appLink,
   githubLink,
+  about,
 }: StepProps) {
   // TODO: add show more feature
   // const [showMore, setShowMore] = useState(false);
@@ -72,13 +74,14 @@ function Step({
         </small>
         <div className="company-title">
           <img
+            title={about}
             alt={`company-image - ${at}`}
             className={classnames(type === "projects" && "pointer")}
             src={image}
             onClick={type === "projects" ? () => setShowPreview(true) : null}
           />
           <div>
-            <h3>
+            <h3 title={about}>
               {title}{" "}
               {at &&
                 (link ? (

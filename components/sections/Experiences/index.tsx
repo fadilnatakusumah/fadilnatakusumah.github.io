@@ -22,6 +22,7 @@ export function Experiences() {
             employment={data.employment}
             link={data.link}
             at={data.at}
+            about={data.about}
           />
         ))}
       </Steps>
