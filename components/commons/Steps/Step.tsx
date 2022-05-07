@@ -125,25 +125,25 @@ function Step({
                 </Labels>
               </div>
             )}
+            {techstacks.length > 0 && (
+              <div className="tech-stack">
+                <Labels>
+                  {techstacks.map((label, i) => (
+                    <Label key={i}>{label}</Label>
+                  ))}
+                </Labels>
+              </div>
+            )}
           </div>
         </div>
-
-        {techstacks.length > 0 && (
-          <div className="tech-stack">
-            <Labels>
-              {techstacks.map((label, i) => (
-                <Label key={i}>{label}</Label>
-              ))}
-            </Labels>
-          </div>
-        )}
-        <div className="descriptions">
-          <ul>
-            {descriptions.map((desc, i) => (
-              <li key={i}>{desc}</li>
-            ))}
-          </ul>
-        </div>
+      </div>
+      <div className="item-descriptions">
+        <ul>
+          {descriptions.map((desc, i) => (
+            <li key={i} dangerouslySetInnerHTML={{ __html: desc }} />
+          ))}
+        </ul>
+        
         {/* <div className="show-more-button">
           <p onClick={() => setShowMore(!showMore)}>
             Read {showMore ? "less" : "more"}

@@ -118,8 +118,19 @@ export const StyledStep = styled.div`
     top: 15px;
   }
 
-  .item-content {
+  .item-descriptions {
+    margin-left: 20px;
     padding: 20px;
+    ul {
+      line-height: 24px;
+      li {
+        list-style: disc;
+      }
+    }
+  }
+
+  .item-content {
+    padding: 20px 20px 0 20px;
 
     .company-title {
       display: flex;
@@ -129,6 +140,7 @@ export const StyledStep = styled.div`
         width: 80px;
         height: 80px;
         object-fit: cover;
+        border-radius: 10px;
       }
       > div {
         h3 a {
@@ -146,18 +158,8 @@ export const StyledStep = styled.div`
 
     .tech-stack {
       margin: 10px 0;
-      margin-left: 87px;
     }
 
-    .descriptions {
-      margin-left: 100px;
-      ul {
-        line-height: 24px;
-        li {
-          list-style: disc;
-        }
-      }
-    }
     /* .show-more-button {
       position: absolute;
       user-select: none;

@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   :root{
-    --color-bg: #D0F4EA;
+    --color-bg: #E2FCF8;
     --color-font: #141301;
     --color-font-light: #003728;
     --color-hover: #829399;
@@ -25,13 +25,13 @@ export const GlobalStyle = createGlobalStyle`
 
   [data-theme="dark"] {
     --color-bg: #263648;
-    --color-font: #D0F4EA;
-    --color-font-light: #D0F4EA;
+    --color-font: #E2FCF8;
+    --color-font-light: #E2FCF8;
     --color-hover: #829399;
     --highlight-primary: #0053F7;
     --highlight-primary-light: #5284EA;
     --highlight-secondary: #FF5154;
-    --border-color: #D0F4EA;
+    --border-color: #E2FCF8;
     --box-shadow: 
     0 1px 4px rgba(200,200,200,0.09),
     0 3px 8px rgba(200,200,200,0.09),
