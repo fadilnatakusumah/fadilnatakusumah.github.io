@@ -2,7 +2,7 @@ import { StepProps } from "../components/commons/Steps/Step";
 
 export const EXPERIENCES = [
   {
-    title: "Frontend Developer",
+    title: "Software Engineer (Frontend)",
     employment: "Full-time",
     at: "Flip.id",
     about:
