@@ -112,7 +112,6 @@ export const PROJECTS: StepProps[] = [
   },
   {
     title: "Artikel Islam",
-    githubLink: "https://github.com/fadilnatakusumah/catch-a-pokemon",
     appLink:
       "https://play.google.com/store/apps/details?id=com.fadilnatakusumah.artikel_islam",
     descriptions: [
