@@ -8,7 +8,7 @@ export const DOMAIN =
     ? "https://fadilnatakusumah.vercel.app"
     : "";
 export const RESUME =
-  "https://drive.google.com/file/d/1UxIxGn-zdSVVyiUH5FLOXTDW3ir_Xywe/view?usp=sharing";
+  "https://drive.google.com/file/d/1H3rBjFKv9KXnQx8CkTxvPqRfrOTMn1Cj/view?usp=sharing";
 export const HACKERRANK = "https://www.hackerrank.com/fadil_ntksmh";
 export const GITHUB = "https://github.com/fadilnatakusumah";
 export const LINKEDIN = "https://linkedin.com/in/muhammad-fadhilah-mulyana";
