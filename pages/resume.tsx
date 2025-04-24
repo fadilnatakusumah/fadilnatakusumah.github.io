@@ -1,14 +1,19 @@
+"use client";
+
 import { useEffect } from "react";
 
 import { RESUME } from "../config";
 
 function Resume() {
   useEffect(() => {
-    const location = window?.location;
-    location.href = RESUME;
+    if (window !== undefined) {
+      window.location.replace(RESUME);
+    }
+    // const location = window?.location;
+    // location.href = RESUME;
   }, []);
 
-  return null;
+  return <></>;
 }
 
 export default Resume;
