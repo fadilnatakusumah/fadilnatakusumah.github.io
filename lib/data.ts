@@ -103,11 +103,9 @@ export const PROJECTS = [
       "amplify",
       "aws",
       "s3",
+      "openAI"
     ],
-    descriptions: [
-      "Build an Evernote clone app.",
-      "Easely make a note, update and delete.",
-    ],
+    descriptions: "A web platform for AI-generated wallpapers using OpenAI APIs, supporting login, image sharing, and AWS S3 storage.",
     githubLink: "https://github.com/fadilnatakusumah/nevernote",
   },
   {

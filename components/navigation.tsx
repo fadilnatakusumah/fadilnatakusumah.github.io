@@ -74,7 +74,7 @@ export function Navigation() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Link href="/">Muhammad Fadhilah Mullyana</Link>
+              <Link href="/">Muhammad Fadhilah Mulyana</Link>
             </motion.h1>
             <motion.h2
               className="mt-3 text-lg font-medium tracking-tight text-slate-900 dark:text-slate-200 sm:text-xl"
