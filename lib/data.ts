@@ -103,10 +103,12 @@ export const PROJECTS = [
       "amplify",
       "aws",
       "s3",
-      "openAI"
+      "openAI",
     ],
-    descriptions: "A web platform for AI-generated wallpapers using OpenAI APIs, supporting login, image sharing, and AWS S3 storage.",
-    githubLink: "https://github.com/fadilnatakusumah/nevernote",
+    descriptions:
+      "A web platform for AI-generated wallpapers using OpenAI APIs, supporting login, image sharing, and AWS S3 storage.",
+    githubLink: "https://github.com/fadilnatakusumah/aiwallpapergen",
+    appLink: "https://aiwallpapergen.com",
   },
   {
     title: "Nevernote",
@@ -197,5 +199,4 @@ export const PROJECTS = [
 
 export const RESUME_LINK =
   "https://drive.google.com/file/d/1tFSwYhwDRoviVqFqJzH596HfieuDn5dP/view?usp=sharing";
-export const GITHUB_LINK =
-  "https://github.com/fadilnatakusumah";
+export const GITHUB_LINK = "https://github.com/fadilnatakusumah";

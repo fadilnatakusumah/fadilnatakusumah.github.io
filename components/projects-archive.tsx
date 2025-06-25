@@ -71,75 +71,79 @@ export function ProjectsArchive() {
           Back to Home
         </a>
       </div>
-      <table className="mt-12 w-full border-collapse text-left">
-        <thead className="sticky top-0 z-10 border-b border-slate-300/50 dark:border-slate-300/10 bg-white/75 dark:bg-slate-900/75 px-6 py-5 backdrop-blur">
-          <tr>
-            <th className="py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200">Year</th>
-            <th className="py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200">Project</th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200 lg:table-cell">
-              Built with
-            </th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200 sm:table-cell">
-              Link
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {PROJECTS.map((project, index) => (
-            <tr key={index} className="border-b border-slate-300/50 dark:border-slate-300/10 last:border-none">
-              <td className="py-4 pr-4 align-top text-sm">
-                <div className="translate-y-px text-slate-500 dark:text-slate-500">{project.duration.from} - {project.duration.to || "Present"} </div>
-              </td>
-              <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-900 dark:text-slate-200">
-                <div>
-                  <div className="block sm:hidden">
-                    <a
-                      className="inline-flex items-baseline font-medium leading-tight text-slate-900 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-300 focus-visible:text-teal-600 dark:focus-visible:text-teal-300 sm:hidden group/link text-base transition-colors"
-                      href={project.appLink || project.githubLink}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                      <span>
-                        {project.title}
-                        <ExternalLink className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
-                      </span>
-                    </a>
-                  </div>
-                  <div className="hidden sm:block">{project.title}</div>
-                </div>
-                <div className="mt-2 text-sm leading-normal text-slate-600 dark:text-slate-400">
-                  {Array.isArray(project.descriptions) ? (
-                    <ul>
-                      {project.descriptions.map((desc, descIndex) => (
-                        <li key={descIndex} dangerouslySetInnerHTML={{ __html: desc }} />
-                      ))}
-                    </ul>
-                  ) : (
-                    project.descriptions
-                  )}
-                </div>
-                <ul className="mt-2 flex flex-wrap lg:hidden" aria-label="Technologies used">
-                  {project.techstacks.map((tech, techIndex) => (
-                    <li key={techIndex} className="mr-1.5 mt-2">
-                      <div className="flex items-center rounded-full bg-teal-100 dark:bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-800 dark:text-teal-300">
-                        {tech}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </td>
-              <td>
-                {(project.appLink || project.githubLink) && <Link
-                  className="text-sm hover:text-blue-600"
-                  href={project.appLink || project.githubLink!} target="_blank" rel="noreferrer">
-                  {project.appLink || project.githubLink}
-                </Link>}
-              </td>
+      <div className="overflow-x-auto" style={{ scrollbarWidth: "thin" }}>
+        <table className="mt-12 w-full border-collapse text-left">
+          <thead className="sticky top-0 z-10 border-b border-slate-300/50 dark:border-slate-300/10 bg-white/75 dark:bg-slate-900/75 px-6 py-5 backdrop-blur">
+            <tr>
+              <th className="py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200">Year</th>
+              <th className="py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200">Project</th>
+              <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200 lg:table-cell">
+                Built with
+              </th>
+              <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-900 dark:text-slate-200 sm:table-cell">
+                Link
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {PROJECTS.map((project, index) => (
+              <tr key={index} className="border-b border-slate-300/50 dark:border-slate-300/10 last:border-none">
+                <td className="py-4 pr-4 align-top text-sm">
+                  <div className="translate-y-px whitespace-nowrap text-slate-500 dark:text-slate-500">{project.duration.from} - {project.duration.to || "Present"} </div>
+                </td>
+                <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-900 dark:text-slate-200">
+                  <div>
+                    <div className="block sm:hidden">
+                      <a
+                        className="inline-flex items-baseline font-medium leading-tight text-slate-900 dark:text-slate-200 hover:text-teal-600 dark:hover:text-teal-300 focus-visible:text-teal-600 dark:focus-visible:text-teal-300 sm:hidden group/link text-base transition-colors"
+                        href={project.appLink || project.githubLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                        <span>
+                          {project.title}
+                          <ExternalLink className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
+                        </span>
+                      </a>
+                    </div>
+                    <div className="hidden sm:block">{project.title}</div>
+                  </div>
+                  <div className="mt-2 text-sm leading-normal text-slate-600 dark:text-slate-400">
+                    {Array.isArray(project.descriptions) ? (
+                      <ul>
+                        {project.descriptions.map((desc, descIndex) => (
+                          <li key={descIndex} dangerouslySetInnerHTML={{ __html: desc }} />
+                        ))}
+                      </ul>
+                    ) : (
+                      project.descriptions
+                    )}
+                  </div>
+                </td>
+                <td className="hidden lg:table-cell">
+                  <div className="gap-0.5 mb-2 flex flex-wrap min-w-[200px]" aria-label="Technologies used">
+                    {project.techstacks.map((tech, techIndex) => (
+                      <span key={techIndex} className="mr-1.5 mt-2">
+                        <div className="flex items-center rounded-full bg-teal-100 dark:bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-800 dark:text-teal-300">
+                          {tech}
+                        </div>
+                      </span>
+                    ))}
+                  </div>
+                </td>
+                <td className="hidden sm:table-cell">
+                  {(project.appLink || project.githubLink) && <Link
+                    className="text-sm hover:text-blue-600"
+                    href={project.appLink || project.githubLink!} target="_blank" rel="noreferrer">
+                    {project.appLink || project.githubLink}
+                  </Link>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
