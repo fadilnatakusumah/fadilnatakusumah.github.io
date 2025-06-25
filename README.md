@@ -1,1 +1,0 @@
-## You can see my Portfolio here: [Fadil Natakusumah](https://fadilnatakusumah.vercel.app/)

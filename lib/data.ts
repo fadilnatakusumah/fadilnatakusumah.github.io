@@ -1,5 +1,3 @@
-import { StepProps } from "../components/commons/Steps/Step";
-
 export const EXPERIENCES = [
   {
     title: "Software Engineer (Frontend)",
@@ -12,11 +10,11 @@ export const EXPERIENCES = [
     current: true,
     duration: {
       from: "Jul 2021",
-      to: "",
+      to: "Feb 2025",
     },
     techstacks: ["react", "redux", "tailwind", "styled-components"],
     descriptions: [
-      `Maintain and develop <a target="_blank" style="color: blue; font-weight:bold;" href="https://flip.id/business">Flip for Business</a> (Flip.id’s B2B transfer service) web and provide the best user experience for B2B money transfer services.`,
+      `Maintain and develop <a target="_blank" style="color: #5656d2; font-weight:bold;" href="https://flip.id/business">Flip for Business</a> (Flip.id’s B2B transfer service) web and provide the best user experience for B2B money transfer services.`,
     ],
   },
   {
@@ -84,7 +82,34 @@ export const EXPERIENCES = [
   },
 ];
 
-export const PROJECTS: StepProps[] = [
+export const PROJECTS = [
+  {
+    title: "AI Wallpaper Gen",
+    employment: "Personal",
+    image: "/assets/images/projects/aiwallpapergen.png",
+    duration: {
+      from: "Nov 2024",
+      to: "Feb 2025",
+    },
+    techstacks: [
+      "tRPC",
+      "typescript",
+      "next.js",
+      "react",
+      "shadcn-ui",
+      "prisma",
+      "postgresql",
+      "supabase",
+      "amplify",
+      "aws",
+      "s3",
+    ],
+    descriptions: [
+      "Build an Evernote clone app.",
+      "Easely make a note, update and delete.",
+    ],
+    githubLink: "https://github.com/fadilnatakusumah/nevernote",
+  },
   {
     title: "Nevernote",
     employment: "Personal",
@@ -171,3 +196,8 @@ export const PROJECTS: StepProps[] = [
     },
   },
 ];
+
+export const RESUME_LINK =
+  "https://drive.google.com/file/d/1tFSwYhwDRoviVqFqJzH596HfieuDn5dP/view?usp=sharing";
+export const GITHUB_LINK =
+  "https://github.com/fadilnatakusumah";
