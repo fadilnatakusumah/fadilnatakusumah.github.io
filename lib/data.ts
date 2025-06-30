@@ -152,6 +152,31 @@ export const PROJECTS = [
     image: "/assets/images/projects/artikel_islam_preview.gif",
   },
   {
+    title: "Aksa Tech",
+    employment: "Contract",
+    image: "/assets/images/projects/aksatech.gif",
+    duration: {
+      from: "April 2025",
+      to: "May 2025",
+    },
+    techstacks: ["typescript", "next.js", "tailwindcss", "react", "vercel"],
+    descriptions: "A Drone Aviation company website that provide information about their services and products.",
+    appLink: "https://aksatech.id",
+  },
+  {
+    title: "PDF Generation",
+    employment: "Contract",
+    image: "/assets/images/projects/pdf-generation.gif",
+    duration: {
+      from: "April 2025",
+      to: "April 2025",
+    },
+    techstacks: ["typescript", "next.js", "tailwindcss", "react", "vercel"],
+    descriptions: "An app that allows you to generate a PDF from a URL.",
+    appLink: "https://next-pdf-generation.vercel.app/",
+    githubLink: "https://github.com/fadilnatakusumah/next-pdf-generation",
+  },
+  {
     title: "Catch a Pokemon",
     employment: "Personal",
     image: "/assets/images/projects/catch_a_pokemon.gif",
@@ -198,5 +223,5 @@ export const PROJECTS = [
 ];
 
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/1tFSwYhwDRoviVqFqJzH596HfieuDn5dP/view?usp=sharing";
+  "https://drive.google.com/file/d/1RW6pOI7xTVftsrFYfnroRTtwIHov8q-k/view?usp=sharing";
 export const GITHUB_LINK = "https://github.com/fadilnatakusumah";

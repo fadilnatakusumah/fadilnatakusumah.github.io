@@ -1,6 +1,9 @@
+"use client"
+
 import { PROJECTS } from "@/lib/data"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
+import { Suspense } from "react"
 
 export function ProjectsArchive() {
   // const allProjects = [
@@ -113,7 +116,9 @@ export function ProjectsArchive() {
                     {Array.isArray(project.descriptions) ? (
                       <ul>
                         {project.descriptions.map((desc, descIndex) => (
-                          <li key={descIndex} dangerouslySetInnerHTML={{ __html: desc }} />
+                          <Suspense fallback={null} key={descIndex}>
+                            <li key={descIndex} dangerouslySetInnerHTML={{ __html: desc }} />
+                          </Suspense>
                         ))}
                       </ul>
                     ) : (

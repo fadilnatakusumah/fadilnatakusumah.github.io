@@ -91,7 +91,7 @@ export function Projects() {
                       </span>
                     </motion.a>
                   </h3>
-                  <p className="mt-2 text-sm leading-normal text-slate-700 dark:text-slate-300">
+                  <div className="mt-2 text-sm leading-normal text-slate-700 dark:text-slate-300">
                     {Array.isArray(project.descriptions) ? (
                       <ul>
                         {project.descriptions.map((desc, descIndex) => (
@@ -101,7 +101,7 @@ export function Projects() {
                     ) : (
                       project.descriptions
                     )}
-                  </p>
+                  </div>
                   <div className="mt-2 flex items-center gap-2">
                     {project.appLink && <motion.a
                       href={project.appLink}

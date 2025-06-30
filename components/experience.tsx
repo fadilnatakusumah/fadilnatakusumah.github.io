@@ -96,7 +96,7 @@ export function Experience() {
                       </motion.a>
                     </div>
                   </h3>
-                  <p className="mt-2 text-sm leading-normal text-slate-700 dark:text-slate-300">
+                  <div className="mt-2 text-sm leading-normal text-slate-700 dark:text-slate-300">
                     {Array.isArray(exp.descriptions) ? (
                       <ul>
                         {exp.descriptions.map((desc, descIndex) => (
@@ -106,7 +106,7 @@ export function Experience() {
                     ) : (
                       exp.descriptions
                     )}
-                  </p>
+                  </div>
                   <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                     {exp.techstacks.map((tech, techIndex) => (
                       <motion.li

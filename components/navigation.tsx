@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { motion } from "framer-motion"
 import {
   // Github, 
@@ -15,10 +15,14 @@ import Link from "next/link"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { fadeInUp, slideInLeft, hoverScale, hoverLift } from "@/lib/animations"
 import Image from "next/image"
+import ShinyText from "./reactbits/ShinyText/ShinyText"
+import DecayCard from "./reactbits/DecayCard/DecayCard"
+import { useTheme } from "next-themes"
+import { cn } from "@/lib/utils"
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("about")
-
+  const { theme } = useTheme()
   useEffect(() => {
 
     const handleScroll = () => {
@@ -74,7 +78,9 @@ export function Navigation() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Link href="/">Muhammad Fadhilah Mulyana</Link>
+              <Link href="/">
+                <ShinyText className={cn(theme === "dark" ? "" : "text-gray-900")} text={`Muhammad Fadhilah Mulyana`} />
+              </Link>
             </motion.h1>
             <motion.h2
               className="mt-3 text-lg font-medium tracking-tight text-slate-900 dark:text-slate-200 sm:text-xl"
@@ -94,8 +100,8 @@ export function Navigation() {
         <motion.div {...fadeInUp} className="mt-6">
           <Image
             className="rounded-full shadow-xl"
-            alt=""
             src={`/assets/images/profile-pict.jpg`}
+            alt=""
             width={200}
             height={200}
           />
