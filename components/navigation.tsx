@@ -1,24 +1,22 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react"
-import { motion } from "framer-motion"
-import {
-  // Github, 
-  Linkedin,
-  Mail, FileText
-} from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { fadeInUp, hoverLift, hoverScale, slideInLeft } from "@/lib/animations"
 import {
   SiGithub,
-
 } from "@icons-pack/react-simple-icons"
-import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { fadeInUp, slideInLeft, hoverScale, hoverLift } from "@/lib/animations"
-import Image from "next/image"
-import ShinyText from "./reactbits/ShinyText/ShinyText"
-import DecayCard from "./reactbits/DecayCard/DecayCard"
+import { motion } from "framer-motion"
+import {
+  FileText,
+  // Github, 
+  Linkedin,
+  Mail
+} from "lucide-react"
 import { useTheme } from "next-themes"
-import { cn } from "@/lib/utils"
+import Image from "next/image"
+import Link from "next/link"
+import { useEffect, useState } from "react"
+import ShinyText from "./reactbits/ShinyText/ShinyText"
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("about")
@@ -79,11 +77,11 @@ export function Navigation() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <Link href="/">
-                <ShinyText className={cn(theme === "dark" ? "" : "text-gray-900")} text={`Muhammad Fadhilah Mulyana`} />
+                <ShinyText text={`Muhammad Fadhilah Mulyana`} />
               </Link>
             </motion.h1>
             <motion.h2
-              className="mt-3 text-lg font-medium tracking-tight text-slate-900 dark:text-slate-200 sm:text-xl"
+              className="mt-3 text-lg font-medium tracking-tight text-slate-500 dark:text-slate-200 sm:text-xl"
               {...fadeInUp}
               transition={{ delay: 0.2 }}
             >
