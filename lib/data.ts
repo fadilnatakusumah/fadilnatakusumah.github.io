@@ -223,5 +223,5 @@ export const PROJECTS = [
 ];
 
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/1SUhchaO5xEebdMz64KvHpGjEnQT_hU6U/view?usp=sharing";
+  "https://drive.google.com/file/d/1zc9NGQ0xY5ec483Pzomq2OL6HfnKq2cU/view?usp=sharing";
 export const GITHUB_LINK = "https://github.com/fadilnatakusumah";
