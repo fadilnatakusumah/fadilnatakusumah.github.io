@@ -3,7 +3,7 @@ import Link from "next/link"
 export function BlogList() {
   const blogPosts = [
     {
-      slug: "building-accessible-web-apps",
+      slug: "building-accessible-web-applications",
       title: "Building Accessible Web Applications",
       excerpt:
         "Learn the fundamentals of web accessibility and how to implement ARIA attributes, semantic HTML, and keyboard navigation in your React applications.",

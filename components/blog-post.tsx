@@ -1,40 +1,7 @@
+import { BLOG_POSTS } from "@/lib/data"
+
 export function BlogPost({ slug }: { slug: string }) {
-  // In a real app, you would fetch the blog post data based on the slug
-  const post = {
-    title: "Building Accessible Web Applications",
-    date: "2024-01-15",
-    readTime: "8 min read",
-    content: `
-      <p>Web accessibility is not just a nice-to-have feature—it's a fundamental requirement for creating inclusive digital experiences. In this article, we'll explore the key principles and practical techniques for building accessible web applications.</p>
-      
-      <h2>Understanding Web Accessibility</h2>
-      <p>Web accessibility means ensuring that websites and applications can be used by everyone, including people with disabilities. This includes users who rely on screen readers, keyboard navigation, or other assistive technologies.</p>
-      
-      <h2>Key Principles</h2>
-      <p>The Web Content Accessibility Guidelines (WCAG) are built around four main principles:</p>
-      <ul>
-        <li><strong>Perceivable:</strong> Information must be presentable in ways users can perceive</li>
-        <li><strong>Operable:</strong> Interface components must be operable by all users</li>
-        <li><strong>Understandable:</strong> Information and UI operation must be understandable</li>
-        <li><strong>Robust:</strong> Content must be robust enough for various assistive technologies</li>
-      </ul>
-      
-      <h2>Practical Implementation</h2>
-      <p>Here are some practical steps you can take to improve accessibility in your React applications:</p>
-      
-      <h3>Semantic HTML</h3>
-      <p>Use semantic HTML elements that convey meaning and structure. Instead of using generic div elements for everything, use appropriate elements like header, nav, main, section, and footer.</p>
-      
-      <h3>ARIA Attributes</h3>
-      <p>When semantic HTML isn't sufficient, use ARIA (Accessible Rich Internet Applications) attributes to provide additional context to assistive technologies.</p>
-      
-      <h3>Keyboard Navigation</h3>
-      <p>Ensure that all interactive elements can be accessed and operated using only the keyboard. This includes proper focus management and visible focus indicators.</p>
-      
-      <h2>Conclusion</h2>
-      <p>Building accessible web applications is an ongoing process that requires attention to detail and regular testing. By following these guidelines and making accessibility a priority from the start, we can create better experiences for all users.</p>
-    `,
-  }
+  const post = BLOG_POSTS[slug]
 
   return (
     <div>

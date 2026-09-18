@@ -1,0 +1,16 @@
+{
+  "name": "Muhammad Fadhilah Mulyana - Portfolio",
+  "short_name": "Fadil",
+  "description": "Portfolio of Muhammad Fadhilah Mulyana, Software Engineer specializing in React, Next.js, and modern web architectures.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
