@@ -16,6 +16,7 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { trackEvent } from "@/lib/analytics"
 import ShinyText from "./reactbits/ShinyText/ShinyText"
 
 export function Navigation() {
@@ -169,6 +170,7 @@ export function Navigation() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                onClick={() => trackEvent("social_click", { label: link.label })}
                 {...hoverLift}
               >
                 <link.icon className="h-6 w-6" />

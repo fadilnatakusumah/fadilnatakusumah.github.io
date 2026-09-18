@@ -1,18 +1,20 @@
-import type React from "react"
-import type { Metadata } from "next"
-import "./globals.css"
-import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
+import type React from "react";
+import type { Metadata } from "next";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   // Primary metadata
   title: {
     default: "Muhammad Fadhilah Mulyana — Software Engineer",
-    template: "%s | Muhammad Fadhilah Mulyana"
+    template: "%s | Muhammad Fadhilah Mulyana",
   },
-  description: "Portfolio of Muhammad Fadhilah Mulyana, Software Engineer specializing in React, Next.js, and modern web architectures.",
+  description:
+    "Portfolio of Muhammad Fadhilah Mulyana, Software Engineer specializing in React, Next.js, and modern web architectures.",
 
   // Canonical URL
   alternates: {
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   },
 
   // Viewport & charset
-  viewport: { width: 'device-width', initialScale: 1 },
+  viewport: { width: "device-width", initialScale: 1 },
   // charset: 'utf-8',
 
   // Icons & manifest
@@ -33,8 +35,8 @@ export const metadata: Metadata = {
 
   // Theme color for browser UI
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 
   // SEO keywords
@@ -46,19 +48,20 @@ export const metadata: Metadata = {
     "Next.js",
     "Portfolio",
     "JavaScript",
-    "TypeScript"
+    "TypeScript",
   ],
 
   // Author and publisher
   authors: [
-    { name: "Muhammad Fadhilah Mulyana", url: "https://fadilnatakusumah.com" }
+    { name: "Muhammad Fadhilah Mulyana", url: "https://fadilnatakusumah.com" },
   ],
   publisher: "Muhammad Fadhilah Mulyana",
 
   // Open Graph for rich link previews
   openGraph: {
     title: "Muhammad Fadhilah Mulyana — Software Engineer",
-    description: "Explore projects, resume, and contact information of Muhammad Fadhilah Mulyana, a Software Engineer.",
+    description:
+      "Explore projects, resume, and contact information of Muhammad Fadhilah Mulyana, a Software Engineer.",
     url: "https://fadilnatakusumah.com",
     siteName: "Muhammad Fadhilah Mulyana - Portfolio",
     images: [
@@ -66,8 +69,8 @@ export const metadata: Metadata = {
         url: "https://fadilnatakusumah.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Fadhilah Mulyana - Portfolio"
-      }
+        alt: "Muhammad Fadhilah Mulyana - Portfolio",
+      },
     ],
     locale: "en_US",
     type: "website",
@@ -77,9 +80,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Muhammad Fadhilah Mulyana — Software Engineer",
-    description: "Portfolio of Muhammad Fadhilah Mulyana: React, Next.js & modern web architecture.",
+    description:
+      "Portfolio of Muhammad Fadhilah Mulyana: React, Next.js & modern web architecture.",
     // creator: "@your_twitter_handle",
-    images: ["https://fadilnatakusumah.com/twitter-image.jpg"]
+    images: ["https://fadilnatakusumah.com/twitter-image.jpg"],
   },
 
   // Robots directives (for pages that inherit this layout)
@@ -91,12 +95,10 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1
-    }
-  }
+      "max-snippet": -1,
+    },
+  },
 };
-
-
 
 // export const metadata: Metadata = {
 //   title: "Muhammad Fadhilah Mulyana",
@@ -129,15 +131,21 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

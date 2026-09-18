@@ -5,6 +5,7 @@ import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 import { fadeInUp, staggerContainer, hoverLift, scaleIn } from "@/lib/animations"
+import { trackEvent } from "@/lib/analytics"
 import { PROJECTS } from "@/lib/data"
 
 export function Projects() {
@@ -75,6 +76,7 @@ export function Projects() {
                       href={project.appLink || project.githubLink}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={() => trackEvent("project_click", { project: project.title, target: "main" })}
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     >
@@ -107,6 +109,7 @@ export function Projects() {
                       href={project.appLink}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={() => trackEvent("project_click", { project: project.title, target: "app" })}
                       className="text-xs text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors"
                       {...hoverLift}
                     >
@@ -116,6 +119,7 @@ export function Projects() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={() => trackEvent("project_click", { project: project.title, target: "github" })}
                       className="text-xs text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors"
                       {...hoverLift}
                     >

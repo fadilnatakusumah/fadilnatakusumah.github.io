@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 import { fadeInUp, staggerContainer, hoverScale } from "@/lib/animations"
+import { trackEvent } from "@/lib/analytics"
 
 export function Contact() {
   const { ref, controls } = useScrollReveal()
@@ -20,6 +21,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    trackEvent("contact_form_submit")
     // Handle form submission here
     console.log("Form submitted:", formData)
     // Reset form
