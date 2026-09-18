@@ -1,7 +1,7 @@
 "use client"
 
 import { PROJECTS } from "@/lib/data"
-import { ExternalLink, Github } from "lucide-react"
+import { FiExternalLink } from "react-icons/fi"
 import Link from "next/link"
 import { Suspense } from "react"
 
@@ -106,7 +106,7 @@ export function ProjectsArchive() {
                         <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                         <span>
                           {project.title}
-                          <ExternalLink className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
+                          <FiExternalLink className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
                         </span>
                       </a>
                     </div>

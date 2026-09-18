@@ -1,7 +1,8 @@
 "use client"
 
 import { motion, spring } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { SiGithub } from "@icons-pack/react-simple-icons"
+import { FiExternalLink } from "react-icons/fi"
 import Image from "next/image"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 import { fadeInUp, staggerContainer, hoverLift, scaleIn } from "@/lib/animations"
@@ -88,7 +89,7 @@ export function Projects() {
                           whileHover={{ x: 2, y: -2 }}
                           transition={{ type: "spring", stiffness: 400, damping: 17 }}
                         >
-                          <ExternalLink className="h-4 w-4 shrink-0" />
+                          <FiExternalLink className="h-4 w-4 shrink-0" />
                         </motion.div>
                       </span>
                     </motion.a>
@@ -113,7 +114,7 @@ export function Projects() {
                       className="text-xs text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors"
                       {...hoverLift}
                     >
-                      <ExternalLink className="h-3 w-3" />
+                      <FiExternalLink className="h-3 w-3" />
                     </motion.a>}
                     {project.githubLink && <motion.a
                       href={project.githubLink}
@@ -123,7 +124,7 @@ export function Projects() {
                       className="text-xs text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 transition-colors"
                       {...hoverLift}
                     >
-                      <Github className="h-3 w-3" />
+                      <SiGithub className="h-3 w-3" />
                     </motion.a>}
                   </div>
                   <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
@@ -175,7 +176,7 @@ export function Projects() {
                 whileHover={{ x: 2, y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <ExternalLink className="h-4 w-4 shrink-0" />
+                <FiExternalLink className="h-4 w-4 shrink-0" />
               </motion.div>
             </span>
           </motion.a>

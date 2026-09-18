@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink } from "lucide-react"
+import { FiExternalLink } from "react-icons/fi"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 import { fadeInUp, staggerContainer, hoverLift } from "@/lib/animations"
 import { EXPERIENCES } from "@/lib/data"
@@ -90,7 +90,7 @@ export function Experience() {
                             whileHover={{ x: 2, y: -2 }}
                             transition={{ type: "spring", stiffness: 400, damping: 17 }}
                           >
-                            <ExternalLink className="h-4 w-4 shrink-0" />
+                            <FiExternalLink className="h-4 w-4 shrink-0" />
                           </motion.div>
                         </span>
                       </motion.a>
@@ -148,7 +148,7 @@ export function Experience() {
                   whileHover={{ x: 2, y: -2 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  <ExternalLink className="h-4 w-4 shrink-0" />
+                  <FiExternalLink className="h-4 w-4 shrink-0" />
                 </motion.div>
               </span>
             </Link>

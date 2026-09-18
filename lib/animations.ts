@@ -10,12 +10,6 @@ export const fadeInUp = {
   },
 };
 
-export const fadeIn = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { duration: 0.6 },
-};
-
 export const staggerContainer = {
   animate: {
     transition: {
@@ -32,12 +26,6 @@ export const slideInLeft = {
     ease: easeInOut,
     // [0.6, -0.05, 0.01, 0.99]
   },
-};
-
-export const slideInRight = {
-  initial: { opacity: 0, x: 60 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] },
 };
 
 export const scaleIn = {

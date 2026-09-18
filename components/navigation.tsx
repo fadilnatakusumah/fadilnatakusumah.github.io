@@ -1,71 +1,84 @@
-"use client"
+"use client";
 
-import { ThemeToggle } from "@/components/theme-toggle"
-import { fadeInUp, hoverLift, hoverScale, slideInLeft } from "@/lib/animations"
+import { ThemeToggle } from "@/components/theme-toggle";
+import { fadeInUp, hoverLift, hoverScale, slideInLeft } from "@/lib/animations";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import {
-  SiGithub,
-} from "@icons-pack/react-simple-icons"
-import { motion } from "framer-motion"
-import {
-  FileText,
-  // Github, 
-  Linkedin,
-  Mail
-} from "lucide-react"
-import { useTheme } from "next-themes"
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import { trackEvent } from "@/lib/analytics"
-import ShinyText from "./reactbits/ShinyText/ShinyText"
+  FiEdit3,
+  FiFileText,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+} from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
+import ShinyText from "./reactbits/ShinyText/ShinyText";
 
 export function Navigation() {
-  const [activeSection, setActiveSection] = useState("about")
-  const { theme } = useTheme()
+  const [activeSection, setActiveSection] = useState("about");
   useEffect(() => {
-
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects", "contact"]
-      const scrollPosition = window.scrollY + 100
+      const sections = ["about", "experience", "projects", "contact"];
+      const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const offsetTop = element.offsetTop
-          const offsetHeight = element.offsetHeight
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
-  const socialLinks = [
-    { href: "https://github.com/fadilnatakusumah", icon: SiGithub, label: "GitHub" },
-    { href: "https://linkedin.com/in/muhammad-fadhilah-mulyana", icon: Linkedin, label: "LinkedIn" },
-    { href: "mailto:fadil.ntksmh@gmail.com", icon: Mail, label: "Email" },
-    { href: "/resume", icon: FileText, label: "Resume" },
-  ]
+  type NavLink = {
+    href: string;
+    label: string;
+    icon: React.ComponentType<{ className?: string }>;
+  };
+
+  const socialLinks: NavLink[] = [
+    {
+      href: "https://github.com/fadilnatakusumah",
+      icon: FiGithub,
+      label: "GitHub",
+    },
+    {
+      href: "https://linkedin.com/in/muhammad-fadhilah-mulyana",
+      icon: FiLinkedin,
+      label: "LinkedIn",
+    },
+    { href: "mailto:fadil.ntksmh@gmail.com", icon: FiMail, label: "Email" },
+    { href: "/blog", icon: FiEdit3, label: "Blog" },
+    { href: "/resume", icon: FiFileText, label: "Resume" },
+  ];
 
   const navItems = [
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
-  ]
+  ];
 
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
@@ -115,7 +128,11 @@ export function Navigation() {
         </motion.p>
 
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
-          <motion.ul className="mt-16 w-max" {...fadeInUp} transition={{ delay: 0.4 }}>
+          <motion.ul
+            className="mt-16 w-max"
+            {...fadeInUp}
+            transition={{ delay: 0.4 }}
+          >
             {navItems.map((item, index) => (
               <motion.li
                 key={item.id}
@@ -130,21 +147,26 @@ export function Navigation() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <motion.span
-                    className={`nav-indicator mr-4 h-px transition-all ${activeSection === item.id
-                      ? "w-16 bg-slate-900 dark:bg-slate-200"
-                      : "w-8 bg-slate-400 dark:bg-slate-600 group-hover:w-16 group-hover:bg-slate-700 dark:group-hover:bg-slate-300"
-                      }`}
+                    className={`nav-indicator mr-4 h-px transition-all ${
+                      activeSection === item.id
+                        ? "w-16 bg-slate-900 dark:bg-slate-200"
+                        : "w-8 bg-slate-400 dark:bg-slate-600 group-hover:w-16 group-hover:bg-slate-700 dark:group-hover:bg-slate-300"
+                    }`}
                     animate={{
                       width: activeSection === item.id ? 64 : 32,
-                      backgroundColor: activeSection === item.id ? "var(--foreground)" : "var(--muted-foreground)",
+                      backgroundColor:
+                        activeSection === item.id
+                          ? "var(--foreground)"
+                          : "var(--muted-foreground)",
                     }}
                     transition={{ duration: 0.3 }}
                   />
                   <span
-                    className={`nav-text text-xs font-bold uppercase tracking-widest transition-colors ${activeSection === item.id
-                      ? "text-slate-900 dark:text-slate-200"
-                      : "text-slate-500 dark:text-slate-500 group-hover:text-slate-700 dark:group-hover:text-slate-200"
-                      }`}
+                    className={`nav-text text-xs font-bold uppercase tracking-widest transition-colors ${
+                      activeSection === item.id
+                        ? "text-slate-900 dark:text-slate-200"
+                        : "text-slate-500 dark:text-slate-500 group-hover:text-slate-700 dark:group-hover:text-slate-200"
+                    }`}
                   >
                     {item.label}
                   </span>
@@ -155,7 +177,11 @@ export function Navigation() {
         </nav>
       </motion.div>
 
-      <motion.div className="flex items-center justify-between" {...fadeInUp} transition={{ delay: 0.8 }}>
+      <motion.div
+        className="flex items-center justify-between"
+        {...fadeInUp}
+        transition={{ delay: 0.8 }}
+      >
         <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
           {socialLinks.map((link, index) => (
             <motion.li
@@ -170,7 +196,9 @@ export function Navigation() {
                 href={link.href}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                onClick={() => trackEvent("social_click", { label: link.label })}
+                onClick={() =>
+                  trackEvent("social_click", { label: link.label })
+                }
                 {...hoverLift}
               >
                 <link.icon className="h-6 w-6" />
@@ -183,5 +211,5 @@ export function Navigation() {
         </motion.div>
       </motion.div>
     </header>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Moon, Sun } from "lucide-react"
+import { FiMoon, FiSun } from "react-icons/fi"
 import { useTheme } from "next-themes"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -43,7 +43,7 @@ export function ThemeToggle() {
               exit={{ y: 30, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <Sun className="h-4 w-4" />
+              <FiSun className="h-4 w-4" />
             </motion.div>
           ) : (
             <motion.div
@@ -53,7 +53,7 @@ export function ThemeToggle() {
               exit={{ y: 30, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <Moon className="h-4 w-4" />
+              <FiMoon className="h-4 w-4" />
             </motion.div>
           )}
         </AnimatePresence>
