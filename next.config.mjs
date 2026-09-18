@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // eslint key removed: Next 16 dropped built-in linting (next lint removed)
   typescript: {
     ignoreBuildErrors: true,
   },
