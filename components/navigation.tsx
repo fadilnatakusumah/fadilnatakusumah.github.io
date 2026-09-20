@@ -5,6 +5,7 @@ import { fadeInUp, hoverLift, hoverScale, slideInLeft } from "@/lib/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   FiEdit3,
   FiFileText,
@@ -17,10 +18,18 @@ import { trackEvent } from "@/lib/analytics";
 import ShinyText from "./reactbits/ShinyText/ShinyText";
 
 export function Navigation() {
-  const [activeSection, setActiveSection] = useState("about");
+  const router = useRouter();
+  // Empty on routes that don't render the home page sections, so nothing is
+  // highlighted as "current" there.
+  const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
+    const sections = ["about", "experience", "projects", "contact"];
+
+    // /blog, /projects, /resume and /blog/[slug] reuse this header but have no
+    // in-page sections to track.
+    if (!sections.some((id) => document.getElementById(id))) return;
+
     const handleScroll = () => {
-      const sections = ["about", "experience", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -40,14 +49,19 @@ export function Navigation() {
       }
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // These sections only exist on "/", so fall back to navigating home to the
+  // anchor when the current route doesn't render them.
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/#${sectionId}`);
     }
   };
 
